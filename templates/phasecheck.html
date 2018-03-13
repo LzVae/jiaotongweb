@@ -1,0 +1,181 @@
+{% load humanize %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+      <meta HTTP-EQUIV = "Pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV = "Cache-Control" CONTENT="no-cache">
+      <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+    <meta HTTP-EQUIV = "Expires" CONTENT="0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/jquery.bxslider.css"%}" rel="stylesheet">
+    <link href="{% static "css/style.css"%}" rel="stylesheet">
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+
+
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>flowchart</title>
+
+  </head>
+  <body>
+
+    <nav class="nav navbar-fixed-top navbar-inverse" >
+        <div class="=container-fluid">
+            <div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="/">首页</a></li>
+						<li><a href="/flowchart">双时域图</a></li>
+						<li><a href="/map">路口地图</a></li>
+						<li><a href="/datacheck">数据监测</a></li>
+						<li><a href="/detection">评价优化系统</a></li>
+						<li><a href="/phasecheck">相位评价与优化</a></li>
+					</ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+    <br>
+    <br>
+    <br>
+     <form  action="" method="POST">
+             {% csrf_token %}
+     <div class="row">
+         <div class="col-md-2">
+              <div class='form-group'>
+
+                                      <div class="input-group">
+                                          <label class="input-group-addon" for="year">年</label>
+                                          {{phasecheck_form.originyear}}
+{#                                         <input  id="year" type="text" name="year" placeholder="请输入年份" >#}
+
+                                      </div>
+
+                                       <div class="input-group">
+                                          <label class="input-group-addon"   for="month">月</label>
+                                           {{phasecheck_form.originmonth}}
+{#                                          <input id='month' type="text" name="month" placeholder="请输入月份" >#}
+
+                                      </div>
+
+                                       <div class="input-group">
+                                          <label class="input-group-addon"   for="day">日</label>
+                                           {{phasecheck_form.originday}}
+{#                                          <input id='day' type="text" name="day" placeholder="请输入日期">#}
+                                       </div>
+
+
+                                  </div>
+         </div>
+{#         <div class="col-md-2">#}
+{#               <div class="input-group">#}
+{#                                <label class="input-group-addon" for="direction">年</label>#}
+{#                                {{datapicture_form.endyear }}#}
+{#                            </div>#}
+{##}
+{#                            <div class="input-group">#}
+{#                                <label class="input-group-addon" for="Xaxisa">月</label>#}
+{#                                {{datapicture_form.endmonth }}#}
+{#                            </div>#}
+{##}
+{#                            <div class="input-group">#}
+{#                                 <label class="input-group-addon" for="Xaxisb">日</label>#}
+{#                                {{datapicture_form.endday}}#}
+{#                            </div>#}
+{#         </div>#}
+         <div class="col-md-2">
+                            <div class="input-group">
+                                 <label class="input-group-addon" for="Alane">路口A</label>
+                                {{phasecheck_form.intersectionid_s }}
+                            </div>
+                        <div class="input-group">
+                                 <label class="input-group-addon" for="Alane">路口B</label>
+                                {{phasecheck_form.intersectionid_e }}
+                            </div>
+         </div>
+         <div class="col-md-2">
+             <div>
+                      <button type='submit' id="myButton1" data-loading-text="Loading..." class="btn btn-primary btn-lg" >
+                          运行
+                      </button>
+                     </div>
+         </div>
+     </div>
+     </form>
+     <div class="row">
+         <div class="col-md-4">
+                <div class="panel panel-warning">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">相位差评价</h3>
+                          </div>
+                          <div class="panel-body">
+                               <pre>
+                                  {{ conclusion1}}
+                               </pre>
+
+
+
+
+                          </div>
+                </div>
+         </div>
+      <div class="col-md-4">
+                <div class="panel panel-warning">
+                          <div class="panel-heading">
+                            <h3 class="panel-title">相位差优化</h3>
+                          </div>
+                          <div class="panel-body">
+                               <pre>
+                                  {{ conclusion2}}
+                               </pre>
+
+
+
+
+                          </div>
+                </div>
+         </div>
+{#         <div class="col-md-2">#}
+{##}
+{#         </div>#}
+         <div class="col-md-4">
+              <section style="text-align:center;">>
+                  {% block picture %}
+                    {% endblock %}
+
+                </section>
+
+         </div>
+
+
+     </div>
+
+
+
+
+
+
+    </div>
+
+
+  </body>
+</html>
+

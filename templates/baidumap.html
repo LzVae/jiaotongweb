@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+    <meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+    <title>百度地图API自定义地图</title>
+    <!--引用百度地图API-->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=x0I6Gd7mU03E2xqoXuGPGMkuMWNmInBY"></script>
+  </head>
+
+  <body>
+    <!--百度地图容器-->
+    <div style="width:700px;height:550px;border:#ccc solid 1px;font-size:12px" id="map"></div>
+    <p style="color:red;font-weight:600">地图生成工具基于百度地图JS api v2.0版本开发，使用请申请密匙。
+      <a href="http://developer.baidu.com/map/index.php?title=jspopular/guide/introduction" style="color:#2f83c7" target="_blank">了解如何申请密匙</a>
+      <a href="http://lbsyun.baidu.com/apiconsole/key?application=key" style="color:#2f83c7" target="_blank">申请密匙</a>
+    </p>
+  </body>
+  <script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+      createMap();//创建地图
+      setMapEvent();//设置地图事件
+      addMapControl();//向地图添加控件
+      addMapOverlay();//向地图添加覆盖物
+    }
+    function createMap(){
+      map = new BMap.Map("map");
+      map.centerAndZoom(new BMap.Point(121.450415,28.660954),18);
+    }
+    function setMapEvent(){
+      map.enableScrollWheelZoom();
+      map.enableDragging();
+    }
+    function addClickHandler(target,window){
+      target.addEventListener("click",function(){
+        target.openInfoWindow(window);
+      });
+    }
+    function addMapOverlay(){
+      var markers = [
+        {content:"东环大道枫南路",title:"23东环大道枫南路",imageOffset: {width:0,height:3},position:{lat:28.662721,lng:121.440547}},
+        {content:"东环大道开元路",title:"75东环大道开元路",imageOffset: {width:0,height:3},position:{lat:28.662697,lng:121.440493}},
+        {content:"市府大道东环大道",title:"56市府大道东环大道",imageOffset: {width:0,height:3},position:{lat:28.658093,lng:121.438211}},
+        {content:"东环大道康平路",title:"77东环大道康平路",imageOffset: {width:0,height:3},position:{lat:28.654614,lng:121.436581}},
+        {content:"市府大道白云山中路",title:"55市府大道白云山中路",imageOffset: {width:0,height:3},position:{lat:28.65963,lng:121.429641}},
+        {content:"市府大道经中路",title:"57市府大道经中路",imageOffset: {width:0,height:3},position:{lat:28.657305,lng:121.444419}},
+        {content:"市府大道机场路",title:"58市府大道机场路",imageOffset: {width:0,height:3},position:{lat:28.65673,lng:121.449323}},
+        {content:"机场路枫南路",title:"24机场路枫南路",imageOffset: {width:0,height:3},position:{lat:28.667063,lng:121.450033}},
+        {content:"机场路开元路",title:"89机场路开元路",imageOffset: {width:0,height:3},position:{lat:28.662015,lng:121.450298}}
+      ];
+      for(var index = 0; index < markers.length; index++ ){
+        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+        var marker = new BMap.Marker(point,{icon:new BMap.Icon("http://api.map.baidu.com/lbsapi/createmap/images/icon.png",new BMap.Size(20,25),{
+          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+        })});
+        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+        var opts = {
+          width: 200,
+          title: markers[index].title,
+          enableMessage: false
+        };
+        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+        marker.setLabel(label);
+        addClickHandler(marker,infoWindow);
+        map.addOverlay(marker);
+      };
+    }
+    //向地图添加控件
+    function addMapControl(){
+      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+      scaleControl.setUnit(BMAP_UNIT_METRIC);
+      map.addControl(scaleControl);
+      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:1});
+      map.addControl(navControl);
+      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:false});
+      map.addControl(overviewControl);
+    }
+    var map;
+      initMap();
+  </script>
+</html>

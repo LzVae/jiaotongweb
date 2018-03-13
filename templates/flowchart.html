@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load humanize %}
+{% load staticfiles %}
+{#{% load url from future %}#}
+
+{% block picture %}
+{#    <img src="/static/images/examples.jpg", width="1500px">#}
+    <img src="{{ netname123 }}", width="100%">
+{% endblock %}
+{% block show %}
+
+
+                <button type="button" id="myButton2" data-loading-text="Loading..." class="btn btn-primary  btn-lg" autocomplete="off">
+                <a href="/flowchart">
+                                    生成图像
+                      </a>
+                              </button>
+
+
+
+
+
+{% endblock %}

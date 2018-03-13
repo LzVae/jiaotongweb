@@ -1,0 +1,78 @@
+{% load humanize %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta HTTP-EQUIV = "Pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV = "Cache-Control" CONTENT="no-cache,must-revalidate">
+    <meta HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+    <meta HTTP-EQUIV = "Expires" CONTENT="0">
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/jquery.bxslider.css"%}" rel="stylesheet">
+    <link href="{% static "css/style.css"%}" rel="stylesheet">
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+
+
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>flowchart</title>
+
+  </head>
+  <body>
+
+    <nav class="nav navbar-fixed-top navbar-inverse" >
+        <div class="=container-fluid">
+            <div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="/">首页</a></li>
+						<li><a href='/flowchart'>双时域图</a></li>
+						<li><a href="/map">路口地图</a></li>
+						<li><a href="/datacheck">数据监测</a></li>
+						<li><a href="/detection">评价优化系统</a></li>
+						<li><a href="/phasecheck">相位评价与优化</a></li>
+					</ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid">
+
+        <header>
+            <br>
+            <br>
+            <br>
+            <br>
+        </header>
+        <section style="text-align:center">
+
+            {% block chunk %}
+            {% endblock %}
+
+
+        </section>
+
+
+
+    </div>
+
+
+  </body>
+</html>
+
