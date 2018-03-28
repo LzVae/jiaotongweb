@@ -1,8 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e7944a2-0213-4381-8dd0-b3950831ada4" name="Default" comment="">
+    <list default="true" id="0e7944a2-0213-4381-8dd0-b3950831ada4" name="Default" comment="UI设计图来了，接下来开始重构前端代码，变动会很大，这里相当于做一个备份">
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/css/layui.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/css/layui.mobile.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/css/modules/code.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/css/modules/laydate/default/laydate.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/css/modules/layer/default/icon-ext.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/css/modules/layer/default/icon.png" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/css/modules/layer/default/layer.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/css/modules/layer/default/loading-0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/css/modules/layer/default/loading-1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/css/modules/layer/default/loading-2.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/font/iconfont.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/font/iconfont.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/font/iconfont.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/font/iconfont.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/0.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/1.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/10.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/11.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/12.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/13.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/14.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/15.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/16.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/17.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/18.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/19.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/2.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/20.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/21.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/22.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/23.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/24.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/25.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/26.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/27.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/28.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/29.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/3.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/30.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/31.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/32.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/33.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/34.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/35.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/36.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/37.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/38.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/39.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/4.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/40.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/41.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/42.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/43.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/44.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/45.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/46.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/47.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/48.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/49.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/5.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/50.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/51.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/52.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/53.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/54.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/55.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/56.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/57.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/58.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/59.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/6.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/60.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/61.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/62.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/63.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/64.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/65.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/66.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/67.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/68.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/69.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/7.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/70.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/71.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/8.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/images/face/9.gif" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/lay/modules/carousel.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/lay/modules/code.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/lay/modules/element.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/lay/modules/flow.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/lay/modules/form.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/lay/modules/jquery.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/lay/modules/laydate.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/lay/modules/layedit.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/lay/modules/layer.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/lay/modules/laypage.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/lay/modules/laytpl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/lay/modules/mobile.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/lay/modules/table.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/lay/modules/tree.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/lay/modules/upload.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/lay/modules/util.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/layui.all.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/chart/static/layui/layui.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/chart/static/css/style.css" afterPath="$PROJECT_DIR$/chart/static/css/style.css" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
+      <change beforePath="$PROJECT_DIR$/templates/datacheckbase.html" afterPath="$PROJECT_DIR$/templates/datacheckbase.html" />
+      <change beforePath="$PROJECT_DIR$/templates/detection.html" afterPath="$PROJECT_DIR$/templates/detection.html" />
+      <change beforePath="$PROJECT_DIR$/templates/detectionbase.html" afterPath="$PROJECT_DIR$/templates/detectionbase.html" />
+      <change beforePath="$PROJECT_DIR$/templates/home.html" afterPath="$PROJECT_DIR$/templates/home.html" />
+      <change beforePath="$PROJECT_DIR$/templates/homebase.html" afterPath="$PROJECT_DIR$/templates/homebase.html" />
+      <change beforePath="$PROJECT_DIR$/templates/mapbase.html" afterPath="$PROJECT_DIR$/templates/mapbase.html" />
+      <change beforePath="$PROJECT_DIR$/templates/phasecheck.html" afterPath="$PROJECT_DIR$/templates/phasecheck.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -41,41 +154,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/jiaotongweb/urls.py">
+      <file leaf-file-name="homebase.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/homebase.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="37" column="43" lean-forward="false" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
+            <state relative-caret-position="304">
+              <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="84" selection-end-column="14" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/chart/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="4759" column="35" lean-forward="false" selection-start-line="4759" selection-start-column="35" selection-end-line="4759" selection-end-column="35" />
-              <folding>
-                <marker date="1520602642455" expanded="true" signature="1024:1040" ph="select * fro... " />
-                <marker date="1520602642455" expanded="true" signature="241730:241783" ph="select * fro... " />
-                <marker date="1520602642455" expanded="true" signature="247151:247261" ph="insert into " />
-                <marker date="1520602642455" expanded="true" signature="247887:247910" ph="drop table i... " />
-                <marker date="1520602642455" expanded="true" signature="249040:249181" ph="insert into 2017524_2017525... " />
-                <marker date="1520602642455" expanded="true" signature="250118:250253" ph="insert into " />
-                <marker date="1520602642455" expanded="true" signature="258353:258406" ph="select * fro... " />
-                <marker date="1520602642455" expanded="true" signature="261470:261580" ph="insert into " />
-                <marker date="1520602642455" expanded="true" signature="262104:262127" ph="drop table i... " />
-                <marker date="1520602642455" expanded="true" signature="263161:263302" ph="insert into 2017524_2017525... " />
-                <marker date="1520602642455" expanded="true" signature="264111:264246" ph="insert into " />
-                <marker date="1520602642455" expanded="true" signature="270556:270609" ph="select * fro... " />
-                <marker date="1520602642455" expanded="true" signature="276013:276123" ph="insert into " />
-                <marker date="1520602642455" expanded="true" signature="276757:276780" ph="drop table i... " />
-                <marker date="1520602642455" expanded="true" signature="277910:278051" ph="insert into 2017524_2017525... " />
-                <marker date="1520602642455" expanded="true" signature="278988:279123" ph="insert into " />
-                <marker date="1520602642455" expanded="true" signature="283949:283965" ph="select * fro... " />
-                <marker date="1520602642455" expanded="true" signature="295879:295932" ph="select * fro... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -83,8 +167,20 @@
       <file leaf-file-name="mapbase.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/mapbase.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2442">
-              <caret line="111" column="47" lean-forward="false" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="47" />
+            <state relative-caret-position="352">
+              <caret line="96" column="60" lean-forward="false" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/jiaotongweb/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="383">
+              <caret line="86" column="28" lean-forward="false" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -93,39 +189,36 @@
       <file leaf-file-name="datacheckbase.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/datacheckbase.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="858">
-              <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
-              <folding />
+            <state relative-caret-position="340">
+              <caret line="84" column="38" lean-forward="false" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="datacheck.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/datacheck.html">
+      <file leaf-file-name="detectionbase.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/detectionbase.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="20" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-              <folding />
+            <state relative-caret-position="396">
+              <caret line="83" column="37" lean-forward="true" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="63" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkbase.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chart/static/js/checkbase.js">
+      <file leaf-file-name="phasecheck.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/phasecheck.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mapbase.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chart/static/js/mapbase.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-              <folding />
+            <state relative-caret-position="184">
+              <caret line="86" column="34" lean-forward="true" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="60" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,8 +226,8 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chart/static/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state relative-caret-position="176">
+              <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -174,7 +267,6 @@
         <option value="$PROJECT_DIR$/templates/show.html" />
         <option value="$PROJECT_DIR$/../zhinengjiaotong/mysqltest.py" />
         <option value="$PROJECT_DIR$/../zhinengjiaotong/picture/picturetesttest.py" />
-        <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/templates/404.html" />
         <option value="$PROJECT_DIR$/templates/baidumap.html" />
         <option value="$PROJECT_DIR$/../zhinengjiaotong/UI/test.py" />
@@ -190,16 +282,20 @@
         <option value="$PROJECT_DIR$/chart/__init__.py" />
         <option value="$PROJECT_DIR$/chart/views.py" />
         <option value="$PROJECT_DIR$/jiaotongweb/settings.py" />
-        <option value="$PROJECT_DIR$/templates/homebase.html" />
         <option value="$PROJECT_DIR$/templates/flowchart.html" />
-        <option value="$PROJECT_DIR$/chart/static/css/style.css" />
         <option value="$PROJECT_DIR$/chart/static/js/flowchart.js" />
         <option value="$PROJECT_DIR$/chart/static/js/mapbase.js" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/templates/mapbase.html" />
-        <option value="$PROJECT_DIR$/templates/datacheck.html" />
         <option value="$PROJECT_DIR$/chart/static/js/checkbase.js" />
+        <option value="$PROJECT_DIR$/templates/home.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/chart/static/css/style.css" />
+        <option value="$PROJECT_DIR$/templates/homebase.html" />
+        <option value="$PROJECT_DIR$/templates/datacheck.html" />
+        <option value="$PROJECT_DIR$/templates/detection.html" />
+        <option value="$PROJECT_DIR$/templates/detectionbase.html" />
+        <option value="$PROJECT_DIR$/templates/phasecheck.html" />
         <option value="$PROJECT_DIR$/templates/datacheckbase.html" />
+        <option value="$PROJECT_DIR$/templates/mapbase.html" />
       </list>
     </option>
   </component>
@@ -214,7 +310,9 @@
     <option name="width" value="1386" />
     <option name="height" value="788" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -230,6 +328,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -253,13 +353,6 @@
               <item name="jiaotongweb" type="462c0819:PsiDirectoryNode" />
               <item name="chart" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jiaotongweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jiaotongweb" type="462c0819:PsiDirectoryNode" />
-              <item name="chart" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -276,16 +369,22 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\pythonwork\jiaotongweb\chart\static" />
+      <recent name="D:\pythonwork\jiaotongweb\chart\static\css" />
+      <recent name="D:\pythonwork\jiaotongweb\chart\static\js" />
+      <recent name="D:\pythonwork\jiaotongweb\static" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -539,6 +638,22 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="zhinengjiaotong" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -553,6 +668,14 @@
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;.&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -572,30 +695,6 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="zhinengjiaotong" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_regexPattern" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;.&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Django server.jiaotongweb" />
@@ -629,6 +728,14 @@
       <option name="presentableId" value="Default" />
       <updated>1504599859023</updated>
     </task>
+    <task id="LOCAL-00001" summary="UI设计图来了，接下来开始重构前端代码，变动会很大，这里相当于做一个备份">
+      <created>1522204572243</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1522204572243</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -643,15 +750,16 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32968238" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18330605" sideWeight="0.5151286" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32733223" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28641573" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858709" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30114567" sideWeight="0.48487142" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.204236" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33060557" sideWeight="0.48487142" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18835099" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -661,7 +769,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="manage.py@jiaotongweb" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298969" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -670,8 +777,38 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="UI设计图来了，接下来开始重构前端代码，变动会很大，这里相当于做一个备份" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI设计图来了，接下来开始重构前端代码，变动会很大，这里相当于做一个备份" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -710,34 +847,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../zhinengjiaotong/UI/demo1.png" />
-    <entry file="file://$PROJECT_DIR$/../zhinengjiaotong/UI/demo2.png" />
-    <entry file="file://$PROJECT_DIR$/../zhinengjiaotong/UI/demo.png" />
-    <entry file="file://$PROJECT_DIR$/templates/mapsave.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1311">
-          <caret line="69" column="14" lean-forward="false" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/show.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="56" lean-forward="false" selection-start-line="5" selection-start-column="56" selection-end-line="5" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/map.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../zhinengjiaotong/demo.png" />
-    <entry file="file://$PROJECT_DIR$/23.png" />
-    <entry file="file://$PROJECT_DIR$/58.png" />
-    <entry file="file://$PROJECT_DIR$/chart/static23.png" />
     <entry file="file://$PROJECT_DIR$/chart/static/23.png" />
     <entry file="file://$PROJECT_DIR$/chart/static/89.png" />
     <entry file="file://$PROJECT_DIR$/chart/static/57.png" />
@@ -795,13 +904,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jiaotongweb/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="86" column="28" lean-forward="false" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chart/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -813,20 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-4889">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/homebase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="40" column="61" lean-forward="false" selection-start-line="40" selection-start-column="61" selection-end-line="40" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="54" />
         </state>
       </provider>
     </entry>
@@ -851,63 +939,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chart/static/images/timg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/layui/css/layui.css" />
+    <entry file="file://$PROJECT_DIR$/chart/static/js/myui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/baidumap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1392">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/templates/flowchart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-40">
+        <state relative-caret-position="96">
           <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/map.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chart/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="77" column="21" lean-forward="false" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/jiaotongweb/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="37" column="43" lean-forward="false" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chart/static/js/flowchart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1746">
-          <caret line="155" column="23" lean-forward="false" selection-start-line="155" selection-start-column="23" selection-end-line="155" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mapbase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2442">
-          <caret line="111" column="47" lean-forward="false" selection-start-line="111" selection-start-column="21" selection-end-line="111" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/datacheck.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="20" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chart/static/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state relative-caret-position="-400">
+          <caret line="125" column="4" lean-forward="false" selection-start-line="125" selection-start-column="4" selection-end-line="125" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -920,26 +1000,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chart/static/js/checkbase.js">
+    <entry file="file://$PROJECT_DIR$/templates/datacheck.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        <state relative-caret-position="330">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/datacheckbase.html">
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="39" column="18" lean-forward="false" selection-start-line="39" selection-start-column="18" selection-end-line="39" selection-end-column="18" />
+        <state relative-caret-position="110">
+          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chart/static/js/checkbase.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chart/static/layui/layui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="6442" lean-forward="false" selection-start-line="1" selection-start-column="6442" selection-end-line="1" selection-end-column="6442" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chart/static/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/detection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-586">
+          <caret line="8" column="8" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jiaotongweb/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="40" column="45" lean-forward="false" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chart/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="4759" column="35" lean-forward="false" selection-start-line="4759" selection-start-column="35" selection-end-line="4759" selection-end-column="35" />
+        <state relative-caret-position="258">
+          <caret line="4778" column="38" lean-forward="false" selection-start-line="4778" selection-start-column="38" selection-end-line="4778" selection-end-column="38" />
           <folding>
             <marker date="1520602642455" expanded="true" signature="1024:1040" ph="select * fro... " />
             <marker date="1520602642455" expanded="true" signature="241730:241783" ph="select * fro... " />
@@ -960,6 +1080,79 @@
             <marker date="1520602642455" expanded="true" signature="283949:283965" ph="select * fro... " />
             <marker date="1520602642455" expanded="true" signature="295879:295932" ph="select * fro... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chart/static/js/flowchart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="8" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1609">
+          <caret line="152" column="37" lean-forward="false" selection-start-line="152" selection-start-column="37" selection-end-line="152" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/homebase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="27" column="8" lean-forward="false" selection-start-line="27" selection-start-column="8" selection-end-line="84" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/detectionbase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="83" column="37" lean-forward="true" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="63" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/phasecheck.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="86" column="34" lean-forward="true" selection-start-line="86" selection-start-column="34" selection-end-line="86" selection-end-column="60" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#div#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/datacheckbase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="84" column="38" lean-forward="false" selection-start-line="84" selection-start-column="38" selection-end-line="84" selection-end-column="38" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/mapbase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="96" column="60" lean-forward="false" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jiaotongweb/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="86" column="28" lean-forward="false" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
