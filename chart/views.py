@@ -33,7 +33,7 @@ def start(request):
         host='localhost',
         port=3306,
         user='root',
-        passwd='8200506',
+        passwd='123456',
         db='test',
         charset='utf8'
     )
@@ -4408,7 +4408,7 @@ def datacheck_GetData(resquest):
             host='localhost',
             port=3306,
             user='root',
-            passwd='8200506',
+            passwd='123456',
             db='test',
             charset='utf8'
         )
@@ -4784,7 +4784,7 @@ def datacheck_show(resquest):
         host='localhost',
         port=3306,
         user='root',
-        passwd='8200506',
+        passwd='123456',
         db='test',
         charset='utf8'
     )
@@ -5070,7 +5070,7 @@ def detection_GetData(resquest):
             host='localhost',
             port=3306,
             user='root',
-            passwd='8200506',
+            passwd='123456',
             db='test',
             charset='utf8'
         )
