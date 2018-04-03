@@ -30,11 +30,13 @@
     <script type="text/javascript" src="{% static "js/bg.js" %}"></script>
     <div class="layui-layout layui-layout-admin">
           <div class="layui-header">
-            <div class="layui-logo">交通大数据平台</div>
+            <div class="layui-logo" style="line-height: 28px;">
+                广信大数据驱动交通信号控制分析评价及优化系统
+            </div>
             <!-- 头部区域（可配合layui已有的水平导航） -->
             <ul class="layui-nav layui-layout-left">
               <li class="layui-nav-item layui-this">
-                  <a href="#">评价优化系统</a></li>
+                  <a href="#">周期、相位序列和绿灯时间优化</a></li>
             </ul>
 
             <ul class="layui-nav layui-layout-right">
@@ -51,23 +53,24 @@
                   </li>
 
                   <li class="layui-nav-item">
-                    <a href="/flowchart">双时域图</a>
-                  </li>
-
-                  <li class="layui-nav-item">
-                      <a href="/map">路口地图</a>
-                  </li>
-
-                  <li class="layui-nav-item">
                       <a href="/datacheck">数据监测</a>
                   </li>
 
-                  <li class="layui-nav-item layui-this">
-                      <a href="/detection">评价优化系统</a>
+                  <li class="layui-nav-item">
+                    <a href="/flowchart">交叉口双时域图分析</a>
                   </li>
 
                   <li class="layui-nav-item">
-                      <a href="/phasecheck">相位评价与优化</a>
+                      <a href="/map">交叉口流量分析</a>
+                  </li>
+
+                  <li class="layui-nav-item layui-this">
+                      <a href="/detection" title="周期、相位序列和绿灯时间优化" style="font-size: 12px; text-overflow: clip;">
+                          周期、相位序列和绿灯时间优化</a>
+                  </li>
+
+                  <li class="layui-nav-item">
+                      <a href="/phasecheck">相位差优化</a>
                   </li>
               </ul>
             </div>
@@ -79,10 +82,13 @@
 
 
                 <div class="container-fluid">
+
+                    <div class="row" style="margin-top: 30px;">
+
                      <form  action="" method="POST">
                              {% csrf_token %}
-                     <div class="row" style="margin-top: 10px;">
-                         <div class="col-sm-2 col-md-2 col-lg-2 col-sm-offset-2 col-md-offset-2 col-lg-offset-2">
+
+                         <div class="col-sm-3 col-md-3 col-lg-3">
                               <div class='form-group'>
 
                                                       <div class="input-group">
@@ -107,7 +113,7 @@
 
 
                                                   </div>
-                         </div>
+{#                         </div>#}
                 {#         <div class="col-md-2">#}
                 {#               <div class="input-group">#}
                 {#                                <label class="input-group-addon" for="direction">年</label>#}
@@ -124,67 +130,127 @@
                 {#                                {{datapicture_form.endday}}#}
                 {#                            </div>#}
                 {#         </div>#}
-                         <div class="col-sm-3 col-md-3 col-lg-3">
-                              <div class="input-group">
-                                                 <label class="input-group-addon" for="Alane">路口</label>
-                                                {{datapicture_form.intersectionid }}
-                                            </div>
+{#                         <div class="col-sm-3 col-md-3 col-lg-3">#}
 
-                                            <div class="input-group">
-                                                 <label class="input-group-addon" for="Blane">时间间隔</label>
-                                                {{datapicture_form.time_lenth  }}
-                                            </div>
+                             <br>
+
+                                  <div class="input-group">
+                                         <label class="input-group-addon" for="Alane">路口</label>
+                                        {{datapicture_form.intersectionid }}
+                                  </div>
+
+
+
+                                  <div class="input-group">
+                                       <label class="input-group-addon" for="Blane">时间间隔</label>
+                                      {{datapicture_form.time_lenth  }}
+                                  </div>
+{#                         </div>#}
+{#                         <div class="col-sm-2 col-md-2 col-lg-2">#}
+
+                             <br>
+
+                             <div style="margin-top: 30px;">
+                                  <button type='submit' id="myButton1" data-loading-text="Loading..." class="btn btn-primary btn-lg btn-block" >
+                                      运行
+                                  </button>
+                             </div>
                          </div>
-                         <div class="col-sm-2 col-md-2 col-lg-2">
-                             <div>
-                                      <button type='submit' id="myButton1" data-loading-text="Loading..." class="btn btn-primary btn-lg btn-block" >
-                                          运行
-                                      </button>
-                                     </div>
-                         </div>
-                     </div>
+
                      </form>
 
 
+{#                     </div>#}
 
-                     <div class="row">
+{#                     <div class="row">#}
+
+
+
                          <div class="col-sm-3 col-md-3 col-lg-3" style="padding-left: 5px;padding-right: 3px;">
-                                <div class="panel panel-warning">
-                                          <div class="panel-heading">
-                                            <h3 class="panel-title">各车道监测结果</h3>
-                                          </div>
-                                          <div class="panel-body"
-                                          style="overflow: auto;  max-height: 1080px; padding: 0px">
-                                               <pre>
-                                                  {{ conclusion1}}
-                                               </pre>
+{#                                <div class="panel panel-warning">#}
+{#                                          <div class="panel-heading">#}
+{#                                            <h3 class="panel-title">各车道监测结果</h3>#}
+{#                                          </div>#}
+{#                                          <div class="panel-body"#}
+{#                                          style="overflow: auto;  max-height: 1080px; padding: 0px">#}
+{#                                               <pre>#}
+{#                                                  {{ conclusion1}}#}
+{#                                               </pre>#}
+{##}
+{##}
+{##}
+{##}
+{#                                          </div>#}
+{#                                </div>#}
+
+                             <div class="layui-collapse" lay-accordion>
+{#                                  <div class="layui-colla-item">#}
+{#                                    <h2 class="layui-colla-title">各车道监测结果</h2>#}
+{#                                    <div class="layui-colla-content"#}
+{#                                         style="overflow: auto;  max-height: 1080px; padding: 0px">#}
+{##}
+{#                                        <pre>#}
+{#                                            {{ conclusion1}}#}
+{#                                        </pre>#}
+{##}
+{#                                    </div>#}
+{#                                  </div>#}
 
 
+                                 <div class="layui-colla-item">
+                                    <h2 class="layui-colla-title">相位评价及优化</h2>
+                                    <div class="layui-colla-content layui-show"
+                                         style="overflow: auto;  max-height: 1080px; padding: 0px">
 
+                                        <pre>
+                                            {{ conclusion2}}
+                                        </pre>
 
-                                          </div>
+                                    </div>
+
                                 </div>
-                         </div>
-                      <div class="col-sm-3 col-md-3 col-lg-3" style="padding-left: 5px;padding-right: 3px;">
-                                <div class="panel panel-warning">
-                                          <div class="panel-heading">
-                                            <h3 class="panel-title">相位评价及优化</h3>
-                                          </div>
-                                          <div class="panel-body"
-                                           style="overflow: auto; max-height: 1080px; padding: 0px">
-                                               <pre>
-                                                  {{ conclusion2}}
-                                               </pre>
+
+
+
+{#                         </div>#}
+
+
+{#                      <div class="col-sm-3 col-md-3 col-lg-3" style="padding-left: 5px;padding-right: 3px;">#}
+
+
+{#                                <div class="panel panel-warning">#}
+{#                                          <div class="panel-heading">#}
+{#                                            <h3 class="panel-title">相位评价及优化</h3>#}
+{#                                          </div>#}
+{#                                          <div class="panel-body"#}
+{#                                           style="overflow: auto; max-height: 1080px; padding: 0px">#}
+{#                                               <pre>#}
+{#                                                  {{ conclusion2}}#}
+{#                                               </pre>#}
+{#                                          </div>#}
+{#                                </div>#}
 
 
 
 
-                                          </div>
-                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                          </div>
                 {#         <div class="col-md-2">#}
                 {##}
-                {#         </div>#}
+                         </div>
                          <div class="col-sm-6 col-md-6 col-lg-6">
                               <section style="text-align:center;">
                                   {% block picture %}
