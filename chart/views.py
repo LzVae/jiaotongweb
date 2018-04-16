@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 import pymysql
 import pymysql.cursors
 from datetime import datetime
@@ -33,7 +34,7 @@ def start(request):
         host='localhost',
         port=3306,
         user='root',
-        passwd='123456',
+        passwd='8200506',
         db='test',
         charset='utf8'
     )
@@ -2075,7 +2076,8 @@ def sectorGetDate(resquest):
                 ax.set_frame_on(False)
                 # plt.imshow()
                 # canvas.print_figure('demo.png',bbox_inches='tight',transparent=True)
-                plt.savefig("D:\pythonwork\jiaotongweb\chart\static\images\_mappicture/" + str(a) +'_'+str(ran)+ '.png', bbox_inches='tight',
+                path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '\chart'
+                plt.savefig(path+"\static\images\_mappicture/" + str(a) +'_'+str(ran)+ '.png', bbox_inches='tight',
                             transparent=True, dpi=58)
                 plt.close()
                 # s="F:\pythonwork\jiaotongweb"+"\"+
@@ -4073,11 +4075,12 @@ def Get_Date(resquest):
                 # plt.xticks(np.linspace(f, g, g - f + 1, endpoint=True))
                 # plt.yticks(np.linspace(0, e, (e - 0)/10 + 1, endpoint=True))
 
+                path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '\chart'
                 picturename = "D:\pythonwork\jiaotongweb\chart\static\images\_flowchart\examples" + str(ran) + ".jpg"
                 #plt.savefig(picturename, dpi=200)
                 print(str(ran))
                 name='examples'+str(ran)
-                plt.savefig("D:\pythonwork\jiaotongweb\chart\static\images\_flowchart/"+name+".jpg",dpi=200)
+                plt.savefig(path+"\static\images\_flowchart/"+name+".jpg",dpi=200)
                 plt.close()
 
 
@@ -4408,7 +4411,7 @@ def datacheck_GetData(resquest):
             host='localhost',
             port=3306,
             user='root',
-            passwd='123456',
+            passwd='8200506',
             db='test',
             charset='utf8'
         )
@@ -4724,8 +4727,9 @@ def datacheck_GetData(resquest):
             # plt.text(4,2,'横坐标：时间间隔'+'t',horizontalalignment='right',va='top')
             # plt.show()
             name = str(t.originyear) + str(t.originmonth) + str(t.originday) + '_' + str(t.endyear) + str(t.endmonth) + str(t.endday)+'_'+str(t.intersectionid)+'_'+str(t.time_lenth)
-            plt.savefig("D:\pythonwork\jiaotongweb\chart\static\images\_datacheck\show/" + 'datacheck' +str(ran)+ '.jpg', dpi=300)
-            plt.savefig("D:\pythonwork\jiaotongweb\chart\static\images\_datacheck\save/" + name + '.jpg', dpi=300)
+            path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '\chart'
+            plt.savefig(path+"\static\images\_datacheck\show/" + 'datacheck' +str(ran)+ '.jpg', dpi=300)
+            plt.savefig(path+"\static\images\_datacheck\save/" + name + '.jpg', dpi=300)
             plt.close()
 
         # return render(resquest,'flowchart.html',{context})
@@ -4784,7 +4788,7 @@ def datacheck_show(resquest):
         host='localhost',
         port=3306,
         user='root',
-        passwd='123456',
+        passwd='8200506',
         db='test',
         charset='utf8'
     )
@@ -5070,7 +5074,7 @@ def detection_GetData(resquest):
             host='localhost',
             port=3306,
             user='root',
-            passwd='123456',
+            passwd='8200506',
             db='test',
             charset='utf8'
         )
@@ -5966,8 +5970,8 @@ def detection_GetData(resquest):
 
             detetiondata_temp = detection(time_lenth)
             def conclusion1save(a):
-
-                f=open('D:\pythonwork\jiaotongweb\chart\static/text/detection.txt','wb')
+                path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '\chart'
+                f=open(path+'\static/text/detection.txt','wb')
                 for row in a:
                     t=str.encode(row)
                     f.write(t)
@@ -6132,6 +6136,37 @@ def detection_GetData(resquest):
 
             R_new = Get_Rnew(R_temp)
 
+            def R_nameget(a, b):
+                d = '西'
+                m = '左'
+                if a == 0:
+                    d = '北'
+                elif a == 2:
+                    d = '东'
+                elif a == 4:
+                    d = '南'
+                elif a == 6:
+                    d = '西'
+                if b == 1:
+                    m = '右'
+                elif b == 2:
+                    m = '直'
+                elif b == 3:
+                    m = '左'
+                elif b == 4:
+                    m = '直-右'
+                elif b == 5:
+                    m = '直-左-右'
+                elif b == 6:
+                    m = '直-左'
+                elif b == 7:
+                    m = '左-掉头'
+                elif b == 8:
+                    m = '右-左'
+                elif b == 9:
+                    m = '掉头'
+                return d + m
+
             def plancheck(R_new, R_temp, R_old):
                 for i in range(len(R_new)):
                     if R_new[i][0][0] < 0:
@@ -6142,8 +6177,10 @@ def detection_GetData(resquest):
                             table_num = int(math.ceil(mistake_R / 4))
                             R_num = int(mistake_R - (table_num - 1) * 4)
                             lane_list = ringdata[i][4][table_num - 1][1][R_num - 1][1]
-                            print('其中第%d环第%d相位数据,车道%s完全缺失' % (table_num, R_num, lane_list))
-                            conclusion2.append('其中第%d环第%d相位数据,车道%s完全缺失\n' % (table_num, R_num, lane_list))
+                            dirction_lane = getlanesid(picture_idtsclane, lane_list[0])
+                            R_name = R_nameget(dirction_lane[0], dirction_lane[2])
+                            print('其中第%d环第%d相位%s数据,车道%s完全缺失' % (table_num, R_num, R_name, lane_list))
+                            conclusion2.append('其中第%d环第%d相位%s数据,车道%s完全缺失\n' % (table_num, R_num, R_name, lane_list))
                     else:
                         Cnew1 = 0
                         Cnew2 = 0
@@ -6166,7 +6203,8 @@ def detection_GetData(resquest):
                                 conclusion2.append('时间段%s-%s方案周期合理\n' % (ringdata[i][0], ringdata[i][1]))
                             elif flag_C < 0:
                                 print('时间段%s-%s方案周期过大，应减少%d秒' % (ringdata[i][0], ringdata[i][1], 0 - flag_C))
-                                conclusion2.append('时间段%s-%s方案周期过大，应减少%d秒\n' % (ringdata[i][0], ringdata[i][1], 0 - flag_C))
+                                conclusion2.append(
+                                    '时间段%s-%s方案周期过大，应减少%d秒\n' % (ringdata[i][0], ringdata[i][1], 0 - flag_C))
                             flag_P1 = [flagmake(R_old[i][0][0] - R_old[i][1][0]),
                                        flagmake(R_new[i][0][0] - R_new[i][1][0])]
                             flag_P2 = [flagmake(R_old[i][0][2] - R_old[i][1][2]),
@@ -6184,52 +6222,60 @@ def detection_GetData(resquest):
                                 if flag_P1 == [-1, 0]:
                                     print(
                                         '时间段%s-%s不需要搭接相位[R12,R21]，应取消搭接相位[R12,R21]' % (ringdata[i][0], ringdata[i][1]))
-                                    conclusion2.append( '时间段%s-%s不需要搭接相位[R12,R21]，应取消搭接相位[R12,R21]\n' % (ringdata[i][0], ringdata[i][1]))
+                                    conclusion2.append('时间段%s-%s不需要搭接相位[R12,R21]，应取消搭接相位[R12,R21]\n' % (
+                                        ringdata[i][0], ringdata[i][1]))
                                 elif flag_P1 == [1, 0]:
                                     print(
                                         '时间段%s-%s不需要搭接相位[R11,R22]，应取消搭接相位[R11,R22]' % (ringdata[i][0], ringdata[i][1]))
-                                    conclusion2.append( '时间段%s-%s不需要搭接相位[R11,R22]，应取消搭接相位[R11,R22]\n' % (ringdata[i][0], ringdata[i][1]))
+                                    conclusion2.append('时间段%s-%s不需要搭接相位[R11,R22]，应取消搭接相位[R11,R22]\n' % (
+                                        ringdata[i][0], ringdata[i][1]))
                                 elif flag_P1 == [0, -1]:
                                     print('时间段%s-%s需要搭接相位[R12,R21]，应增加接相位[R12,R21]' % (ringdata[i][0], ringdata[i][1]))
-                                    conclusion2.append('时间段%s-%s需要搭接相位[R12,R21]，应增加接相位[R12,R21]\n' % (ringdata[i][0], ringdata[i][1]))
+                                    conclusion2.append(
+                                        '时间段%s-%s需要搭接相位[R12,R21]，应增加接相位[R12,R21]\n' % (ringdata[i][0], ringdata[i][1]))
                                 elif flag_P1 == [0, 1]:
                                     print('时间段%s-%s需要搭接相位[R11,R22]，应增加搭接相位[R11,R22]' % (ringdata[i][0], ringdata[i][1]))
-                                    conclusion2.append('时间段%s-%s需要搭接相位[R11,R22]，应增加搭接相位[R11,R22]\n' % (ringdata[i][0], ringdata[i][1]))
+                                    conclusion2.append(
+                                        '时间段%s-%s需要搭接相位[R11,R22]，应增加搭接相位[R11,R22]\n' % (ringdata[i][0], ringdata[i][1]))
                                 elif flag_P1 == [-1, 1]:
                                     print('时间段%s-%s搭接相位[R12,R21]不合理，应将搭接相位[R12,R21]替换为[R11,R22]' % (
-                                    ringdata[i][0], ringdata[i][1]))
+                                        ringdata[i][0], ringdata[i][1]))
                                     conclusion2.append('时间段%s-%s搭接相位[R12,R21]不合理，应将搭接相位[R12,R21]替换为[R11,R22]\n' % (
-                                    ringdata[i][0], ringdata[i][1]))
+                                        ringdata[i][0], ringdata[i][1]))
                                 elif flag_P1 == [1, -1]:
                                     print('时间段%s-%s搭接相位[R11,R22]不合理，应将搭接相位[R11,R22]替换为[R12,R21]' % (
-                                    ringdata[i][0], ringdata[i][1]))
+                                        ringdata[i][0], ringdata[i][1]))
                                     conclusion2.append('时间段%s-%s搭接相位[R11,R22]不合理，应将搭接相位[R11,R22]替换为[R12,R21]\n' % (
-                                    ringdata[i][0], ringdata[i][1]))
+                                        ringdata[i][0], ringdata[i][1]))
 
                                 if flag_P2 == [-1, 0]:
                                     print(
                                         '时间段%s-%s不需要搭接相位[R14,R23]，应取消搭接相位[R14,R23]' % (ringdata[i][0], ringdata[i][1]))
-                                    conclusion2.append('时间段%s-%s不需要搭接相位[R14,R23]，应取消搭接相位[R14,R23]\n' % (ringdata[i][0], ringdata[i][1]))
+                                    conclusion2.append('时间段%s-%s不需要搭接相位[R14,R23]，应取消搭接相位[R14,R23]\n' % (
+                                        ringdata[i][0], ringdata[i][1]))
                                 elif flag_P2 == [1, 0]:
                                     print(
                                         '时间段%s-%s不需要搭接相位[R13,R24]，应取消搭接相位[R13,R24]' % (ringdata[i][0], ringdata[i][1]))
-                                    conclusion2.append( '时间段%s-%s不需要搭接相位[R13,R24]，应取消搭接相位[R13,R24]\n' % (ringdata[i][0], ringdata[i][1]))
+                                    conclusion2.append('时间段%s-%s不需要搭接相位[R13,R24]，应取消搭接相位[R13,R24]\n' % (
+                                        ringdata[i][0], ringdata[i][1]))
                                 elif flag_P2 == [0, -1]:
                                     print('时间段%s-%s需要搭接相位[R14,R23]，应增加搭接相位[R14,R23]' % (ringdata[i][0], ringdata[i][1]))
-                                    conclusion2.append( '时间段%s-%s不需要搭接相位[R13,R24]，应取消搭接相位[R13,R24]\n' % (ringdata[i][0], ringdata[i][1]))
+                                    conclusion2.append('时间段%s-%s不需要搭接相位[R13,R24]，应取消搭接相位[R13,R24]\n' % (
+                                        ringdata[i][0], ringdata[i][1]))
                                 elif flag_P2 == [0, 1]:
                                     print('时间段%s-%s需要搭接相位[R13,R24]，应增加搭接相位[R13,R24]' % (ringdata[i][0], ringdata[i][1]))
-                                    conclusion2.append('时间段%s-%s需要搭接相位[R13,R24]，应增加搭接相位[R13,R24]\n' % (ringdata[i][0], ringdata[i][1]))
+                                    conclusion2.append(
+                                        '时间段%s-%s需要搭接相位[R13,R24]，应增加搭接相位[R13,R24]\n' % (ringdata[i][0], ringdata[i][1]))
                                 elif flag_P2 == [-1, 1]:
                                     print('时间段%s-%s搭接相位[R14,R23]不合理，应将搭接相位[R14,R23]替换为[R13,R24]' % (
-                                    ringdata[i][0], ringdata[i][1]))
+                                        ringdata[i][0], ringdata[i][1]))
                                     conclusion2.append('时间段%s-%s搭接相位[R14,R23]不合理，应将搭接相位[R14,R23]替换为[R13,R24]\n' % (
-                                    ringdata[i][0], ringdata[i][1]))
+                                        ringdata[i][0], ringdata[i][1]))
                                 elif flag_P2 == [1, -1]:
                                     print('时间段%s-%s搭接相位[R13,R24]不合理，应将搭接相位[R13,R24]替换为[R14,R23]' % (
-                                    ringdata[i][0], ringdata[i][1]))
+                                        ringdata[i][0], ringdata[i][1]))
                                     conclusion2.append('时间段%s-%s搭接相位[R13,R24]不合理，应将搭接相位[R13,R24]替换为[R14,R23]\n' % (
-                                    ringdata[i][0], ringdata[i][1]))
+                                        ringdata[i][0], ringdata[i][1]))
                             flag_R11 = [flagmake(R_new[i][0][0] - R_temp[i][0][0]),
                                         flagmake(R_new[i][0][0] - R_old[i][0][0]),
                                         flagmake(R_temp[i][0][0] - R_old[i][0][0])]
@@ -6266,71 +6312,80 @@ def detection_GetData(resquest):
 
                                 table_num = int(math.ceil((p + 1) / 4))
                                 R_num = int((p + 1) - (table_num - 1) * 4)
+                                dirction_lane = getlanesid(picture_idtsclane,
+                                                           ringdata[i][4][table_num - 1][1][R_num - 1][1][0])
+                                # print(dirction_lane[0],dirction_lane[2])
+                                R_name = R_nameget(dirction_lane[0], dirction_lane[2])
                                 if flag_R[p][0] == 0:
                                     if flag_R[p][1] == 0:
-                                        print('时间段%s-%s第%d环第%d相位绿灯时间合理' % (
-                                        ringdata[i][0], ringdata[i][1], table_num, R_num))
-                                        conclusion2.append('时间段%s-%s第%d环第%d相位绿灯时间合理\n' % (
-                                        ringdata[i][0], ringdata[i][1], table_num, R_num))
+                                        print('时间段%s-%s第%d环第%d相位%s绿灯时间合理' % (
+                                            ringdata[i][0], ringdata[i][1], table_num, R_num, R_name))
+                                        conclusion2.append('时间段%s-%s第%d环第%d相位%s绿灯时间合理\n' % (
+                                            ringdata[i][0], ringdata[i][1], table_num, R_num, R_name))
                                     elif flag_R[p][1] == -1:
                                         t = abs(R_new[i][table_num - 1][R_num - 1] - R_old[i][table_num - 1][R_num - 1])
-                                        print('时间段%s-%s第%d环第%d相位绿灯时间浪费，应该减少%d秒' % (
-                                        ringdata[i][0], ringdata[i][1], table_num, R_num, t))
-                                        conclusion2.append('时间段%s-%s第%d环第%d相位绿灯时间浪费，应该减少%d秒\n' % (
-                                        ringdata[i][0], ringdata[i][1], table_num, R_num, t))
+                                        print('时间段%s-%s第%d环第%d相位%s绿灯时间浪费，应该减少%d秒' % (
+                                            ringdata[i][0], ringdata[i][1], table_num, R_num, R_name, t))
+                                        conclusion2.append('时间段%s-%s第%d环第%d相位%s绿灯时间浪费，应该减少%d秒\n' % (
+                                            ringdata[i][0], ringdata[i][1], table_num, R_num, R_name, t))
                                     elif flag_R[p][1] == 1:
                                         t = abs(R_new[i][table_num - 1][R_num - 1] - R_old[i][table_num - 1][R_num - 1])
-                                        print('时间段%s-%s第%d环第%d相位绿灯时间不足，应该减少%d秒' % (
-                                            ringdata[i][0], ringdata[i][1], table_num, R_num, t))
-                                        conclusion2.append('时间段%s-%s第%d环第%d相位绿灯时间不足，应该减少%d秒\n' % (
-                                            ringdata[i][0], ringdata[i][1], table_num, R_num, t))
+                                        print('时间段%s-%s第%d环第%d相位%s绿灯时间不足，应该减少%d秒' % (
+                                            ringdata[i][0], ringdata[i][1], table_num, R_num, R_name, t))
+                                        conclusion2.append('时间段%s-%s第%d环第%d相位%s绿灯时间不足，应该减少%d秒\n' % (
+                                            ringdata[i][0], ringdata[i][1], table_num, R_num, R_name, t))
                                 elif flag_R[p][0] == 1:
                                     if flag_R[p][1] == -1 and flag_R[p][2] == -1:
                                         t = abs(
                                             R_temp[i][table_num - 1][R_num - 1] - R_old[i][table_num - 1][R_num - 1])
                                         t1 = abs(
                                             R_new[i][table_num - 1][R_num - 1] - R_old[i][table_num - 1][R_num - 1])
-                                        print('时间段%s-%s第%d环第%d相位绿灯时间浪费，应该减少%d秒,但因相位序列约束，只能减少%d秒，该相位的绿灯时间依然有一定浪费' % (
-                                            ringdata[i][0], ringdata[i][1], table_num, R_num, t, t1))
-                                        conclusion2.append('时间段%s-%s第%d环第%d相位绿灯时间浪费，应该减少%d秒,但因相位序列约束，只能减少%d秒，该相位的绿灯时间依然有一定浪费\n' % (
-                                            ringdata[i][0], ringdata[i][1], table_num, R_num, t, t1))
+                                        print('时间段%s-%s第%d环第%d相位%s绿灯时间浪费，应该减少%d秒,但因相位序列约束，只能减少%d秒，该相位的绿灯时间依然有一定浪费' % (
+                                            ringdata[i][0], ringdata[i][1], table_num, R_num, R_name, t, t1))
+                                        conclusion2.append(
+                                            '时间段%s-%s第%d环第%d相位%s绿灯时间浪费，应该减少%d秒,但因相位序列约束，只能减少%d秒，该相位的绿灯时间依然有一定浪费\n' % (
+                                                ringdata[i][0], ringdata[i][1], table_num, R_num, R_name, t, t1))
                                     elif flag_R[p][1] == 0 and flag_R[p][2] == -1:
                                         t = abs(
                                             R_temp[i][table_num - 1][R_num - 1] - R_old[i][table_num - 1][R_num - 1])
-                                        print('时间段%s-%s第%d环第%d相位绿灯时间浪费，应该减少%d秒,但因相位序列约束，绿灯时间不能改变，该相位的绿灯时间依然浪费' % (
-                                            ringdata[i][0], ringdata[i][1], table_num, R_num, t))
-                                        conclusion2.append('时间段%s-%s第%d环第%d相位绿灯时间浪费，应该减少%d秒,但因相位序列约束，绿灯时间不能改变，该相位的绿灯时间依然浪费\n' % (
-                                            ringdata[i][0], ringdata[i][1], table_num, R_num, t))
+                                        print('时间段%s-%s第%d环第%d相位%s绿灯时间浪费，应该减少%d秒,但因相位序列约束，绿灯时间不能改变，该相位的绿灯时间依然浪费' % (
+                                            ringdata[i][0], ringdata[i][1], table_num, R_num, R_name, t))
+                                        conclusion2.append(
+                                            '时间段%s-%s第%d环第%d相位%s绿灯时间浪费，应该减少%d秒,但因相位序列约束，绿灯时间不能改变，该相位的绿灯时间依然浪费\n' % (
+                                                ringdata[i][0], ringdata[i][1], table_num, R_num, R_name, t))
                                     elif flag_R[p][1] == 1 and flag_R[p][2] == -1:
                                         t = abs(
                                             R_temp[i][table_num - 1][R_num - 1] - R_old[i][table_num - 1][R_num - 1])
                                         t1 = abs(
                                             R_new[i][table_num - 1][R_num - 1] - R_old[i][table_num - 1][R_num - 1])
-                                        print('时间段%s-%s第%d环第%d相位绿灯时间浪费，应该减少%d秒,但因相位序列约束，必须增加%d秒，该相位的绿灯时间依然浪费' % (
-                                            ringdata[i][0], ringdata[i][1], table_num, R_num, t, t1))
-                                        conclusion2.append('时间段%s-%s第%d环第%d相位绿灯时间浪费，应该减少%d秒,但因相位序列约束，必须增加%d秒，该相位的绿灯时间依然浪费\n' % (
-                                            ringdata[i][0], ringdata[i][1], table_num, R_num, t, t1))
+                                        print('时间段%s-%s第%d环第%d相位%s绿灯时间浪费，应该减少%d秒,但因相位序列约束，必须增加%d秒，该相位的绿灯时间依然浪费' % (
+                                            ringdata[i][0], ringdata[i][1], table_num, R_num, R_name, t, t1))
+                                        conclusion2.append(
+                                            '时间段%s-%s第%d环第%d相位%s绿灯时间浪费，应该减少%d秒,但因相位序列约束，必须增加%d秒，该相位的绿灯时间依然浪费\n' % (
+                                                ringdata[i][0], ringdata[i][1], table_num, R_num, R_name, t, t1))
                                     elif flag_R[p][1] == 1 and flag_R[p][2] == 0:
                                         t1 = abs(
                                             R_new[i][table_num - 1][R_num - 1] - R_old[i][table_num - 1][R_num - 1])
-                                        print('时间段%s-%s第%d环第%d相位绿灯时间合理,绿灯时间不应改变，但因相位序列约束，必须增加%d秒，该相位的绿灯时间会浪费' % (
-                                            ringdata[i][0], ringdata[i][1], table_num, R_num, t1))
-                                        conclusion2.append('时间段%s-%s第%d环第%d相位绿灯时间合理,绿灯时间不应改变，但因相位序列约束，必须增加%d秒，该相位的绿灯时间会浪费\n' % (
-                                            ringdata[i][0], ringdata[i][1], table_num, R_num, t1))
+                                        print('时间段%s-%s第%d环第%d相位%s绿灯时间合理,绿灯时间不应改变，但因相位序列约束，必须增加%d秒，该相位的绿灯时间会浪费' % (
+                                            ringdata[i][0], ringdata[i][1], table_num, R_num, R_name, t1))
+                                        conclusion2.append(
+                                            '时间段%s-%s第%d环第%d相位%s绿灯时间合理,绿灯时间不应改变，但因相位序列约束，必须增加%d秒，该相位的绿灯时间会浪费\n' % (
+                                                ringdata[i][0], ringdata[i][1], table_num, R_num, R_name, t1))
                                     elif flag_R[p][1] == 1 and flag_R[p][2] == 1:
                                         t = abs(
                                             R_temp[i][table_num - 1][R_num - 1] - R_old[i][table_num - 1][R_num - 1])
                                         t1 = abs(
                                             R_new[i][table_num - 1][R_num - 1] - R_old[i][table_num - 1][R_num - 1])
-                                        print('时间段%s-%s第%d环第%d相位绿灯时间不足,应该增加%d秒，但因相位序列约束，应该增加%d秒，该相位的绿灯时间依然有一定浪费' % (
-                                            ringdata[i][0], ringdata[i][1], table_num, R_num, t, t1))
-                                        conclusion2.append('时间段%s-%s第%d环第%d相位绿灯时间不足,应该增加%d秒，但因相位序列约束，应该增加%d秒，该相位的绿灯时间依然有一定浪费\n' % (
-                                            ringdata[i][0], ringdata[i][1], table_num, R_num, t, t1))
+                                        print('时间段%s-%s第%d环第%d相位%s绿灯时间不足,应该增加%d秒，但因相位序列约束，应该增加%d秒，该相位的绿灯时间依然有一定浪费' % (
+                                            ringdata[i][0], ringdata[i][1], table_num, R_num, R_name, t, t1))
+                                        conclusion2.append(
+                                            '时间段%s-%s第%d环第%d相位%s绿灯时间不足,应该增加%d秒，但因相位序列约束，应该增加%d秒，该相位的绿灯时间依然有一定浪费\n' % (
+                                                ringdata[i][0], ringdata[i][1], table_num, R_num, R_name, t, t1))
 
-            # pointpath123 = [(0, 0), (1, 1), (3, 3)]
-            # pointcodes123 = [Path.MOVETO, Path.LINETO, Path.LINETO]
-            # pathmaker(pointpath123, pointcodes123, 'black', 'black')
-            # plt.savefig('fuck', dpi=100)
+                                        # pointpath123 = [(0, 0), (1, 1), (3, 3)]
+                                        # pointcodes123 = [Path.MOVETO, Path.LINETO, Path.LINETO]
+                                        # pathmaker(pointpath123, pointcodes123, 'black', 'black')
+                                        # plt.savefig('fuck', dpi=100)
 
             def planpicturemaker(R_new):
                 for i in range(len(R_new)):
@@ -6344,12 +6399,13 @@ def detection_GetData(resquest):
                     ax1.set_yticks([])
                     if R_new[i][0][0] < 0:
 
-                        plt.text(1, 0.5, '数据缺失无法分析', horizontalalignment='center', va='center',fontsize=10)
-                        name = 'planchek%d' % (i + 1)+'_'+ str(ran)
-                        #name = name + '.jpg'
-                        #plt.savefig(name, dpi=100)
+                        plt.text(1, 0.5, '数据缺失无法分析', horizontalalignment='center', va='center', fontsize=10)
+                        name = 'planchek%d' % (i + 1) + '_' + str(ran)
+                        # name = name + '.jpg'
+                        # plt.savefig(name, dpi=100)
                         ax1.set_title('时间段%s-%s' % (ringdata[i][0], ringdata[i][1]), fontsize=12)
-                        plt.savefig("D:\pythonwork\jiaotongweb\chart\static\images\_detection/" + name + '.jpg',
+                        path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '\chart'
+                        plt.savefig(path + "\static\images\_detection/" + name + '.jpg',
                                     dpi=500)
                         # plt.close()
                     else:
@@ -6370,8 +6426,13 @@ def detection_GetData(resquest):
                             pointpath = [(long / lenth, offset), (long / lenth, 0.2 + offset),
                                          ((R_new[i][0][j] + long) / lenth, 0.2 + offset),
                                          ((R_new[i][0][j] + long) / lenth, 0 + offset), (long / lenth, 0 + offset)]
+                            dirction_lane = getlanesid(picture_idtsclane, ringdata[i][4][0][1][j][1][0])
+                            # print(dirction_lane[0],dirction_lane[2])
+                            R_name = R_nameget(dirction_lane[0], dirction_lane[2])
                             Rname = 'R1' + "_" + '%d' % (j + 1) + ":" + '%d' % (R_new[i][0][j]) + "秒"
-                            plt.text(long / lenth, 0.3 + offset, Rname, horizontalalignment='left', va='center',fontsize=6)
+                            Rname = R_name + ":" + '%d' % (R_new[i][0][j])
+                            plt.text(long / lenth, 0.3 + offset, Rname, horizontalalignment='left', va='center',
+                                     fontsize=6)
                             long = long + R_new[i][0][j]
                             pointcodes = [Path.MOVETO, Path.LINETO, Path.LINETO, Path.LINETO, Path.LINETO]
 
@@ -6393,8 +6454,13 @@ def detection_GetData(resquest):
                             pointpath = [(long1 / lenth, 0 + offset1), (long1 / lenth, 0.2 + offset1),
                                          ((R_new[i][1][j] + long1) / lenth, 0.2 + offset1),
                                          ((R_new[i][1][j] + long1) / lenth, 0 + offset1), (long1 / lenth, 0 + offset1)]
+                            dirction_lane = getlanesid(picture_idtsclane, ringdata[i][4][1][1][j][1][0])
+                            # print(dirction_lane[0],dirction_lane[2])
+                            R_name = R_nameget(dirction_lane[0], dirction_lane[2])
                             Rname = 'R2' + "_" + '%d' % (j + 1) + ":" + '%d' % (R_new[i][1][j]) + "秒"
-                            plt.text(long1 / lenth, 0.3 + offset1, Rname, horizontalalignment='left', va='center',fontsize=6)
+                            Rname = R_name + ":" + '%d' % (R_new[i][1][j])
+                            plt.text(long1 / lenth, 0.3 + offset1, Rname, horizontalalignment='left', va='center',
+                                     fontsize=6)
                             long1 = long1 + R_new[i][1][j]
                             pointcodes = [Path.MOVETO, Path.LINETO, Path.LINETO, Path.LINETO, Path.LINETO]
                             # pointpath123=[(0,0),(1,1),(3,3)]
@@ -6415,11 +6481,12 @@ def detection_GetData(resquest):
 
                             # pathmaker(pointpath123,pointcodes123, 'black','black')
                         # plt.text(2, 1, 'what', horizontalalignment='center', va='center')
-                        ax1.set_title('时间段%s-%s' % (ringdata[i][0], ringdata[i][1]),fontsize=12)
-                        name = 'planchek%d' % (i + 1)+'_'+ str(ran)
-                        #name = name
-                        #plt.savefig(name, dpi=100)
-                        plt.savefig("D:\pythonwork\jiaotongweb\chart\static\images\_detection/" + name + '.jpg',
+                        ax1.set_title('时间段%s-%s' % (ringdata[i][0], ringdata[i][1]), fontsize=12)
+                        name = 'planchek%d' % (i + 1) + '_' + str(ran)
+                        # name = name
+                        # plt.savefig(name, dpi=100)
+                        path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '\chart'
+                        plt.savefig(path + "\static\images\_detection/" + name + '.jpg',
                                     dpi=500)
                         # plt.show()
                         # plt.close()
@@ -6429,8 +6496,8 @@ def detection_GetData(resquest):
             planpicturemaker(R_new)
 
             def conclusion2save(a):
-
-                f = open('D:\pythonwork\jiaotongweb\chart\static/text/detection_c.txt', 'wb')
+                path = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + '\chart'
+                f = open(path + '\static/text/detection_c.txt', 'wb')
                 for row in a:
                     t = str.encode(row)
                     f.write(t)

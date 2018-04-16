@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0e7944a2-0213-4381-8dd0-b3950831ada4" name="Default" comment="UI设计图来了，接下来开始重构前端代码，变动会很大，这里相当于做一个备份">
+      <change beforePath="$PROJECT_DIR$/.idea/jiaotongweb.iml" afterPath="$PROJECT_DIR$/.idea/jiaotongweb.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/chart/static/text/detection_c.txt" afterPath="$PROJECT_DIR$/chart/static/text/detection_c.txt" />
+      <change beforePath="$PROJECT_DIR$/chart/views.py" afterPath="$PROJECT_DIR$/chart/views.py" />
+      <change beforePath="$PROJECT_DIR$/jiaotongweb/settings.py" afterPath="$PROJECT_DIR$/jiaotongweb/settings.py" />
+      <change beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" afterPath="$PROJECT_DIR$/templates/base.html" />
       <change beforePath="$PROJECT_DIR$/templates/datacheckbase.html" afterPath="$PROJECT_DIR$/templates/datacheckbase.html" />
       <change beforePath="$PROJECT_DIR$/templates/detectionbase.html" afterPath="$PROJECT_DIR$/templates/detectionbase.html" />
@@ -18,12 +23,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/jiaotongweb$Bezier_curve.coverage" NAME="Bezier_curve Coverage Results" MODIFIED="1510816479225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../zhinengjiaotong" />
-    <SUITE FILE_PATH="coverage/jiaotongweb$datamonitoring.coverage" NAME="datamonitoring Coverage Results" MODIFIED="1511442436128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../zhinengjiaotong" />
-    <SUITE FILE_PATH="coverage/jiaotongweb$mysqltest.coverage" NAME="mysqltest Coverage Results" MODIFIED="1506689908572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../zhinengjiaotong" />
-    <SUITE FILE_PATH="coverage/jiaotongweb$test.coverage" NAME="test Coverage Results" MODIFIED="1510740654526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../zhinengjiaotong/UI" />
-    <SUITE FILE_PATH="coverage/jiaotongweb$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1511441591190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../zhinengjiaotong/UI" />
-    <SUITE FILE_PATH="coverage/jiaotongweb$picturetesttest.coverage" NAME="picturetesttest Coverage Results" MODIFIED="1506690310425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../zhinengjiaotong/picture" />
+    <SUITE FILE_PATH="coverage/jiaotongweb$Bezier_curve.coverage" NAME="Bezier_curve Coverage Results" MODIFIED="1510816479225" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/zhinengjiaotong" />
+    <SUITE FILE_PATH="coverage/jiaotongweb$mysqltest.coverage" NAME="mysqltest Coverage Results" MODIFIED="1506689908572" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/zhinengjiaotong" />
+    <SUITE FILE_PATH="coverage/jiaotongweb$datamonitoring.coverage" NAME="datamonitoring Coverage Results" MODIFIED="1511442436128" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/zhinengjiaotong" />
+    <SUITE FILE_PATH="coverage/jiaotongweb$test.coverage" NAME="test Coverage Results" MODIFIED="1510740654526" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/zhinengjiaotong/UI" />
+    <SUITE FILE_PATH="coverage/jiaotongweb$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1511441591190" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/zhinengjiaotong/UI" />
+    <SUITE FILE_PATH="coverage/jiaotongweb$picturetesttest.coverage" NAME="picturetesttest Coverage Results" MODIFIED="1506690310425" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/zhinengjiaotong/picture" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -50,24 +55,10 @@
       <file leaf-file-name="homebase.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/homebase.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="696">
-              <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="31" selection-end-column="18" />
+            <state relative-caret-position="336">
+              <caret line="69" column="32" lean-forward="false" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mapbase.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/mapbase.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1152">
-              <caret line="48" column="18" lean-forward="false" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,35 +67,9 @@
       <file leaf-file-name="datacheckbase.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/datacheckbase.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1728">
-              <caret line="72" column="23" lean-forward="false" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="flowchart.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/flowchart.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+            <state relative-caret-position="409">
+              <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="75" column="23" lean-forward="false" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -112,15 +77,19 @@
       <file leaf-file-name="detectionbase.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/detectionbase.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="184" column="0" lean-forward="true" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1522745623212" expanded="false" signature="8604:8653" ph="..." />
-                <marker date="1522745623212" expanded="false" signature="9602:9639" ph="..." />
-                <marker date="1522745623212" expanded="false" signature="10050:10098" ph="..." />
-              </folding>
+            <state relative-caret-position="49">
+              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="64" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="phasecheck.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/phasecheck.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="39">
+              <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="67" selection-end-column="23" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -128,8 +97,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/jiaotongweb/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="85" column="27" lean-forward="false" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
+            <state relative-caret-position="106">
+              <caret line="103" column="42" lean-forward="false" selection-start-line="103" selection-start-column="37" selection-end-line="103" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -138,48 +107,29 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chart/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+            <state relative-caret-position="106">
+              <caret line="5076" column="29" lean-forward="false" selection-start-line="5076" selection-start-column="29" selection-end-line="5076" selection-end-column="29" />
               <folding>
-                <marker date="1522745850653" expanded="true" signature="1023:1039" ph="select * fro... " />
-                <marker date="1522745850653" expanded="true" signature="241728:241781" ph="select * fro... " />
-                <marker date="1522745850653" expanded="true" signature="247149:247259" ph="insert into " />
-                <marker date="1522745850653" expanded="true" signature="247885:247908" ph="drop table i... " />
-                <marker date="1522745850653" expanded="true" signature="249038:249179" ph="insert into 2017524_2017525... " />
-                <marker date="1522745850653" expanded="true" signature="250116:250251" ph="insert into " />
-                <marker date="1522745850653" expanded="true" signature="258350:258403" ph="select * fro... " />
-                <marker date="1522745850653" expanded="true" signature="261467:261577" ph="insert into " />
-                <marker date="1522745850653" expanded="true" signature="262101:262124" ph="drop table i... " />
-                <marker date="1522745850653" expanded="true" signature="263158:263299" ph="insert into 2017524_2017525... " />
-                <marker date="1522745850653" expanded="true" signature="264108:264243" ph="insert into " />
-                <marker date="1522745850653" expanded="true" signature="270552:270605" ph="select * fro... " />
-                <marker date="1522745850653" expanded="true" signature="276009:276119" ph="insert into " />
-                <marker date="1522745850653" expanded="true" signature="276753:276776" ph="drop table i... " />
-                <marker date="1522745850653" expanded="true" signature="277906:278047" ph="insert into 2017524_2017525... " />
-                <marker date="1522745850653" expanded="true" signature="278984:279119" ph="insert into " />
-                <marker date="1522745850653" expanded="true" signature="283945:283961" ph="select * fro... " />
-                <marker date="1522745850653" expanded="true" signature="295875:295928" ph="select * fro... " />
+                <element signature="e#0#35#0" expanded="true" />
+                <marker date="1523863065505" expanded="true" signature="1034:1050" ph="select * fro... " />
+                <marker date="1523863065505" expanded="true" signature="241876:241929" ph="select * fro... " />
+                <marker date="1523863065505" expanded="true" signature="247297:247407" ph="insert into " />
+                <marker date="1523863065505" expanded="true" signature="248033:248056" ph="drop table i... " />
+                <marker date="1523863065505" expanded="true" signature="249186:249327" ph="insert into 2017524_2017525... " />
+                <marker date="1523863065505" expanded="true" signature="250264:250399" ph="insert into " />
+                <marker date="1523863065505" expanded="true" signature="258537:258590" ph="select * fro... " />
+                <marker date="1523863065505" expanded="true" signature="261654:261764" ph="insert into " />
+                <marker date="1523863065505" expanded="true" signature="262288:262311" ph="drop table i... " />
+                <marker date="1523863065505" expanded="true" signature="263345:263486" ph="insert into 2017524_2017525... " />
+                <marker date="1523863065505" expanded="true" signature="264295:264430" ph="insert into " />
+                <marker date="1523863065505" expanded="true" signature="270740:270793" ph="select * fro... " />
+                <marker date="1523863065505" expanded="true" signature="276197:276307" ph="insert into " />
+                <marker date="1523863065505" expanded="true" signature="276941:276964" ph="drop table i... " />
+                <marker date="1523863065505" expanded="true" signature="278094:278235" ph="insert into 2017524_2017525... " />
+                <marker date="1523863065505" expanded="true" signature="279172:279307" ph="insert into " />
+                <marker date="1523863065505" expanded="true" signature="284133:284149" ph="select * fro... " />
+                <marker date="1523863065505" expanded="true" signature="296063:296116" ph="select * fro... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="phasecheck.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/phasecheck.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="239" column="43" lean-forward="false" selection-start-line="239" selection-start-column="43" selection-end-line="239" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/chart/static/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -207,6 +157,9 @@
       <find>&quot;.jpg&quot;</find>
       <find>savefig</find>
       <find>passwd</find>
+      <find>path =</find>
+      <find>os.</find>
+      <find>passw</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -216,20 +169,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/show.html" />
-        <option value="$PROJECT_DIR$/../zhinengjiaotong/mysqltest.py" />
-        <option value="$PROJECT_DIR$/../zhinengjiaotong/picture/picturetesttest.py" />
+        <option value="C:/zhinengjiaotong/mysqltest.py" />
+        <option value="C:/zhinengjiaotong/picture/picturetesttest.py" />
         <option value="$PROJECT_DIR$/templates/404.html" />
         <option value="$PROJECT_DIR$/templates/baidumap.html" />
-        <option value="$PROJECT_DIR$/../zhinengjiaotong/UI/test.py" />
+        <option value="C:/zhinengjiaotong/UI/test.py" />
         <option value="$PROJECT_DIR$/chart/models.py" />
         <option value="$PROJECT_DIR$/chart/forms.py" />
         <option value="$PROJECT_DIR$/templates/mapsave.html" />
         <option value="$PROJECT_DIR$/templates/map.html" />
         <option value="$PROJECT_DIR$/templates/mapshow.html" />
-        <option value="$PROJECT_DIR$/../zhinengjiaotong/Bezier_curve.py" />
+        <option value="C:/zhinengjiaotong/Bezier_curve.py" />
         <option value="$PROJECT_DIR$/jiaotongweb/urls.py" />
-        <option value="$PROJECT_DIR$/../zhinengjiaotong/UI/test1.py" />
-        <option value="$PROJECT_DIR$/../zhinengjiaotong/datamonitoring.py" />
+        <option value="C:/zhinengjiaotong/UI/test1.py" />
+        <option value="C:/zhinengjiaotong/datamonitoring.py" />
         <option value="$PROJECT_DIR$/chart/__init__.py" />
         <option value="$PROJECT_DIR$/templates/flowchart.html" />
         <option value="$PROJECT_DIR$/chart/static/js/flowchart.js" />
@@ -240,12 +193,13 @@
         <option value="$PROJECT_DIR$/templates/datacheck.html" />
         <option value="$PROJECT_DIR$/templates/detection.html" />
         <option value="$PROJECT_DIR$/chart/static/js/bg.js" />
-        <option value="$PROJECT_DIR$/templates/homebase.html" />
         <option value="$PROJECT_DIR$/templates/datacheckbase.html" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/mapbase.html" />
-        <option value="$PROJECT_DIR$/templates/phasecheck.html" />
+        <option value="$PROJECT_DIR$/manage.py" />
+        <option value="$PROJECT_DIR$/templates/homebase.html" />
         <option value="$PROJECT_DIR$/templates/detectionbase.html" />
+        <option value="$PROJECT_DIR$/templates/phasecheck.html" />
         <option value="$PROJECT_DIR$/jiaotongweb/settings.py" />
         <option value="$PROJECT_DIR$/chart/views.py" />
       </list>
@@ -258,9 +212,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-12" />
-    <option name="width" value="1386" />
-    <option name="height" value="788" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -280,7 +233,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -309,13 +262,6 @@
             <path>
               <item name="jiaotongweb" type="b2602c69:ProjectViewProjectNode" />
               <item name="jiaotongweb" type="462c0819:PsiDirectoryNode" />
-              <item name="chart" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="jiaotongweb" type="b2602c69:ProjectViewProjectNode" />
-              <item name="jiaotongweb" type="462c0819:PsiDirectoryNode" />
               <item name="jiaotongweb" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -332,24 +278,24 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/pythonwork/jiaotongweb/templates/phasecheck.html" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\jiaotongweb\chart\static\images" />
       <recent name="D:\pythonwork\jiaotongweb\chart\static\images" />
       <recent name="D:\pythonwork\jiaotongweb\chart\static" />
       <recent name="D:\pythonwork\jiaotongweb\chart\static\css" />
       <recent name="D:\pythonwork\jiaotongweb\chart\static\js" />
-      <recent name="D:\pythonwork\jiaotongweb\static" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -604,6 +550,45 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="zhinengjiaotong" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="zhinengjiaotong" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -622,45 +607,6 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="zhinengjiaotong" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_regexPattern" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;.&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="zhinengjiaotong" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;.&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Django server.jiaotongweb" />
@@ -715,15 +661,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18330605" sideWeight="0.5151286" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28641573" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36988544" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32569557" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32858709" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22422259" sideWeight="0.48487142" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20045386" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34042552" sideWeight="0.48487142" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17397882" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290469" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -805,16 +750,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../zhinengjiaotong/Bezier_curve.py</url>
+          <url>file://C:/zhinengjiaotong/Bezier_curve.py</url>
           <line>50</line>
           <option name="timeStamp" value="106" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../zhinengjiaotong/UI/test1.py</url>
+          <url>file://C:/zhinengjiaotong/UI/test1.py</url>
           <option name="timeStamp" value="110" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/../zhinengjiaotong/datamonitoring.py</url>
+          <url>file://C:/zhinengjiaotong/datamonitoring.py</url>
           <line>213</line>
           <option name="timeStamp" value="123" />
         </line-breakpoint>
@@ -838,9 +783,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/chart/static/89.png" />
-    <entry file="file://$PROJECT_DIR$/chart/static/57.png" />
-    <entry file="file://$PROJECT_DIR$/chart/static/56.png" />
     <entry file="file://$PROJECT_DIR$/chart/static/24.png" />
     <entry file="file://$PROJECT_DIR$/templates/mapshow.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -849,13 +791,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../zhinengjiaotong/UI/test.py" />
+    <entry file="file://C:/zhinengjiaotong/UI/test.py" />
     <entry file="file://D:/Anaconda3/Lib/codecs.py" />
-    <entry file="file://$PROJECT_DIR$/../zhinengjiaotong/Bezier_curve.py" />
-    <entry file="file://$PROJECT_DIR$/../zhinengjiaotong/traveltime/traveltimecalculate24.py" />
-    <entry file="file://$PROJECT_DIR$/../zhinengjiaotong/picture/picturetesttest.py" />
-    <entry file="file://$PROJECT_DIR$/../zhinengjiaotong/UI/test1.py" />
-    <entry file="file://$PROJECT_DIR$/../zhinengjiaotong/datamonitoring.py" />
+    <entry file="file://C:/zhinengjiaotong/Bezier_curve.py" />
+    <entry file="file://C:/zhinengjiaotong/traveltime/traveltimecalculate24.py" />
+    <entry file="file://C:/zhinengjiaotong/picture/picturetesttest.py" />
+    <entry file="file://C:/zhinengjiaotong/UI/test1.py" />
+    <entry file="file://C:/zhinengjiaotong/datamonitoring.py" />
     <entry file="file://$USER_HOME$/Anaconda3/Lib/site-packages/django/db/backends/mysql/base.py" />
     <entry file="file://$PROJECT_DIR$/chart/migrations/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -864,16 +806,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chart/static/images/_flowchart/examples0.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chart/static/images/_flowchart/examples25.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/chart/static/images/_flowchart/examples0.jpg" />
+    <entry file="file://$PROJECT_DIR$/chart/static/images/_flowchart/examples25.jpg" />
     <entry file="file://I:/test/1.py" />
     <entry file="file://$PROJECT_DIR$/chart/static/js/npm.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -936,11 +870,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chart/static/images/timg.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/layui/css/layui.css" />
     <entry file="file://$PROJECT_DIR$/chart/static/js/myui.js" />
     <entry file="file://$PROJECT_DIR$/templates/baidumap.html">
@@ -971,20 +900,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/datacheck.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chart/static/js/checkbase.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1001,9 +916,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chart/static/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
+        <state relative-caret-position="152">
           <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1028,10 +942,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/jiaotongweb/urls.py">
+    <entry file="file://$PROJECT_DIR$/jiaotongweb/urls.py" />
+    <entry file="file://$PROJECT_DIR$/templates/mapbase.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="40" column="45" lean-forward="false" selection-start-line="40" selection-start-column="45" selection-end-line="40" selection-end-column="45" />
+        <state relative-caret-position="1152">
+          <caret line="48" column="18" lean-forward="false" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/datacheck.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chart/static/images/timg1.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chart/static/images/timg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="50" lean-forward="false" selection-start-line="5" selection-start-column="50" selection-end-line="5" selection-end-column="50" />
           <folding />
         </state>
       </provider>
@@ -1046,101 +995,86 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
+        <state relative-caret-position="456">
           <caret line="75" column="23" lean-forward="false" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/datacheckbase.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1728">
-          <caret line="72" column="23" lean-forward="false" selection-start-line="72" selection-start-column="23" selection-end-line="72" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/homebase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="696">
-          <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="31" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/mapbase.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1152">
-          <caret line="48" column="18" lean-forward="false" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#li#4;n#ul#0;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/phasecheck.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="239" column="43" lean-forward="false" selection-start-line="239" selection-start-column="43" selection-end-line="239" selection-end-column="43" />
+        <state relative-caret-position="409">
+          <caret line="80" column="0" lean-forward="false" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/detectionbase.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="184" column="0" lean-forward="true" selection-start-line="184" selection-start-column="0" selection-end-line="184" selection-end-column="0" />
+        <state relative-caret-position="49">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="64" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/homebase.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="69" column="32" lean-forward="false" selection-start-line="69" selection-start-column="32" selection-end-line="69" selection-end-column="32" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#0;n#form#0;n#div#0;n#div#0;n#div#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1522745623212" expanded="false" signature="8604:8653" ph="..." />
-            <marker date="1522745623212" expanded="false" signature="9602:9639" ph="..." />
-            <marker date="1522745623212" expanded="false" signature="10050:10098" ph="..." />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/phasecheck.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="39">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="67" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/jiaotongweb/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/jiaotongweb/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="85" column="27" lean-forward="false" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
+        <state relative-caret-position="106">
+          <caret line="103" column="42" lean-forward="false" selection-start-line="103" selection-start-column="37" selection-end-line="103" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/chart/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="42" column="0" lean-forward="true" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="106">
+          <caret line="5076" column="29" lean-forward="false" selection-start-line="5076" selection-start-column="29" selection-end-line="5076" selection-end-column="29" />
           <folding>
-            <marker date="1522745850653" expanded="true" signature="1023:1039" ph="select * fro... " />
-            <marker date="1522745850653" expanded="true" signature="241728:241781" ph="select * fro... " />
-            <marker date="1522745850653" expanded="true" signature="247149:247259" ph="insert into " />
-            <marker date="1522745850653" expanded="true" signature="247885:247908" ph="drop table i... " />
-            <marker date="1522745850653" expanded="true" signature="249038:249179" ph="insert into 2017524_2017525... " />
-            <marker date="1522745850653" expanded="true" signature="250116:250251" ph="insert into " />
-            <marker date="1522745850653" expanded="true" signature="258350:258403" ph="select * fro... " />
-            <marker date="1522745850653" expanded="true" signature="261467:261577" ph="insert into " />
-            <marker date="1522745850653" expanded="true" signature="262101:262124" ph="drop table i... " />
-            <marker date="1522745850653" expanded="true" signature="263158:263299" ph="insert into 2017524_2017525... " />
-            <marker date="1522745850653" expanded="true" signature="264108:264243" ph="insert into " />
-            <marker date="1522745850653" expanded="true" signature="270552:270605" ph="select * fro... " />
-            <marker date="1522745850653" expanded="true" signature="276009:276119" ph="insert into " />
-            <marker date="1522745850653" expanded="true" signature="276753:276776" ph="drop table i... " />
-            <marker date="1522745850653" expanded="true" signature="277906:278047" ph="insert into 2017524_2017525... " />
-            <marker date="1522745850653" expanded="true" signature="278984:279119" ph="insert into " />
-            <marker date="1522745850653" expanded="true" signature="283945:283961" ph="select * fro... " />
-            <marker date="1522745850653" expanded="true" signature="295875:295928" ph="select * fro... " />
+            <element signature="e#0#35#0" expanded="true" />
+            <marker date="1523863065505" expanded="true" signature="1034:1050" ph="select * fro... " />
+            <marker date="1523863065505" expanded="true" signature="241876:241929" ph="select * fro... " />
+            <marker date="1523863065505" expanded="true" signature="247297:247407" ph="insert into " />
+            <marker date="1523863065505" expanded="true" signature="248033:248056" ph="drop table i... " />
+            <marker date="1523863065505" expanded="true" signature="249186:249327" ph="insert into 2017524_2017525... " />
+            <marker date="1523863065505" expanded="true" signature="250264:250399" ph="insert into " />
+            <marker date="1523863065505" expanded="true" signature="258537:258590" ph="select * fro... " />
+            <marker date="1523863065505" expanded="true" signature="261654:261764" ph="insert into " />
+            <marker date="1523863065505" expanded="true" signature="262288:262311" ph="drop table i... " />
+            <marker date="1523863065505" expanded="true" signature="263345:263486" ph="insert into 2017524_2017525... " />
+            <marker date="1523863065505" expanded="true" signature="264295:264430" ph="insert into " />
+            <marker date="1523863065505" expanded="true" signature="270740:270793" ph="select * fro... " />
+            <marker date="1523863065505" expanded="true" signature="276197:276307" ph="insert into " />
+            <marker date="1523863065505" expanded="true" signature="276941:276964" ph="drop table i... " />
+            <marker date="1523863065505" expanded="true" signature="278094:278235" ph="insert into 2017524_2017525... " />
+            <marker date="1523863065505" expanded="true" signature="279172:279307" ph="insert into " />
+            <marker date="1523863065505" expanded="true" signature="284133:284149" ph="select * fro... " />
+            <marker date="1523863065505" expanded="true" signature="296063:296116" ph="select * fro... " />
           </folding>
         </state>
       </provider>
