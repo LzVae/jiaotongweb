@@ -1,7 +1,66 @@
 // 让loading效果生效
 $('#myButton1').click(function(event) {
+
+        var starttime = parseInt($('#Xaxisa').val());
+        var endtime = parseInt($('#Xaxisb').val());
+        if(isEmpty(starttime) || isEmpty(endtime)){
+            starttime = parseInt($('#id_Xaxisa').val());
+            endtime = parseInt($('#id_Xaxisb').val());
+        }
+
+        if(starttime < 0 || starttime >24){
+            layui.use('layer', function(){
+			    var layer = layui.layer;
+
+			    layer.msg('起始时间点输入有误，应在0到24之间', {
+				  time: 5000, //5s后自动关闭
+				  btn: ['知道了']
+			    });
+			});
+			event.preventDefault();
+			return;
+        }
+
+        if(endtime < 0 || endtime >24){
+            layui.use('layer', function(){
+			    var layer = layui.layer;
+
+			    layer.msg('结束时间点输入有误，应在0到24之间', {
+				  time: 5000, //5s后自动关闭
+				  btn: ['知道了']
+			    });
+			});
+			event.preventDefault();
+			return;
+        }
+
+
+        if(endtime < starttime){
+            layui.use('layer', function(){
+			    var layer = layui.layer;
+
+			    layer.msg('时间段输入有误，起始时间点应小于结束时间点', {
+				  time: 5000, //5s后自动关闭
+				  btn: ['知道了']
+			    });
+			});
+			event.preventDefault();
+			return;
+        }
+
+
 		$(this).button('loading');
 	});
+
+function isEmpty(str) {
+	if(str == undefined || str.length == 0 || str == null || isNaN(str)){
+		return true;
+	}
+
+	return false;
+}
+
+
 
 // 放大缩小会堆叠的根本原因是input框、select框、textarea框都是后台生成的，没有设置class="form-control"
 $("input").addClass("form-control");
