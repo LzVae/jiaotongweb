@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0e7944a2-0213-4381-8dd0-b3950831ada4" name="Default" comment="UI设计图来了，接下来开始重构前端代码，变动会很大，这里相当于做一个备份">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/chart/static/js/checkbase.js" afterPath="$PROJECT_DIR$/chart/static/js/checkbase.js" />
-      <change beforePath="$PROJECT_DIR$/chart/static/js/flowchart.js" afterPath="$PROJECT_DIR$/chart/static/js/flowchart.js" />
-      <change beforePath="$PROJECT_DIR$/chart/static/js/mapbase.js" afterPath="$PROJECT_DIR$/chart/static/js/mapbase.js" />
-    </list>
+    <list default="true" id="0e7944a2-0213-4381-8dd0-b3950831ada4" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -657,7 +652,14 @@
       <option name="project" value="LOCAL" />
       <updated>1522204572243</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="前端数据校验完成，动态类型一时爽">
+      <created>1524210942139</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1524210942139</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -754,7 +756,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="UI设计图来了，接下来开始重构前端代码，变动会很大，这里相当于做一个备份" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI设计图来了，接下来开始重构前端代码，变动会很大，这里相当于做一个备份" />
+    <MESSAGE value="前端数据校验完成，动态类型一时爽" />
+    <option name="LAST_COMMIT_MESSAGE" value="前端数据校验完成，动态类型一时爽" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
