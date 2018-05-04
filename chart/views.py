@@ -3835,6 +3835,9 @@ def sectorShow_picture(resquest):
 
 
 def Get_Date(resquest):
+    #方法开始时间
+    allstarttime = time.clock();
+
     context={}
     ran=random.randint(0,50)
 
@@ -3887,8 +3890,11 @@ def Get_Date(resquest):
                         intersectionld = row.intersectionid
                         p.append([sid, movement, dircetion, intersectionld])
                 return p
-
+            quhuast = time.clock()
             tsclane = gettsclanelist()
+            quhuaet = time.clock()
+            print('-----读取渠化信息时间：')
+            print(quhuaet-quhuast)
             print("初始化完成 %s" % ctime())
 
 
@@ -3898,49 +3904,70 @@ def Get_Date(resquest):
                 car = []
                 results = []
 
+                sqlst = time.clock()
+
                 if a == 23:
-                    results = I023.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day)
+                    results = I023.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day,passtime__hour__gte=t.Xaxisa,passtime__hour__lte=t.Xaxisb)
                 elif a == 24:
-                    results = I024.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day)
+                    results = I024.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day,passtime__hour__gte=t.Xaxisa,passtime__hour__lte=t.Xaxisb)
                 elif a == 55:
-                    results = I055.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day)
+                    results = I055.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day,passtime__hour__gte=t.Xaxisa,passtime__hour__lte=t.Xaxisb)
                 elif a == 56:
-                    results = I056.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day)
+                    results = I056.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day,passtime__hour__gte=t.Xaxisa,passtime__hour__lte=t.Xaxisb)
                 elif a == 57:
-                    results = I057.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day)
+                    results = I057.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day,passtime__hour__gte=t.Xaxisa,passtime__hour__lte=t.Xaxisb)
                 elif a == 58:
-                    results = I058.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day)
+                    results = I058.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day,passtime__hour__gte=t.Xaxisa,passtime__hour__lte=t.Xaxisb)
                 elif a == 75:
-                    results = I075.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day)
+                    results = I075.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day,passtime__hour__gte=t.Xaxisa,passtime__hour__lte=t.Xaxisb)
                 elif a == 77:
-                    results = I077.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day)
+                    results = I077.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day,passtime__hour__gte=t.Xaxisa,passtime__hour__lte=t.Xaxisb)
                 elif a == 89:
-                    results = I089.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day)
+                    results = I089.objects.filter(passtime__year=t.year, passtime__month=t.month, passtime__day=t.day,passtime__hour__gte=t.Xaxisa,passtime__hour__lte=t.Xaxisb)
                 else:
                     results = []
-
+                sqlet = time.clock()
+                print('----查询数据库用时：')
+                print(sqlet-sqlst)
                 # print(results[0][0])
-                if results:
-                    for rowa in results:
-                        id = rowa.id
-                        inteid = rowa.inteid
-                        direction = rowa.direction
-                        lane = rowa.lane
-                        carplate = rowa.carplate
-                        passtime = rowa.passtime
-                        traveltime = rowa.traveltime
-                        upinteid = rowa.upinteid
-                        updirection = rowa.updirection
-                        uplane = rowa.uplane
-                        car.append([id, inteid, direction, lane, carplate, passtime, traveltime, upinteid, updirection,
-                                    uplane])
-                    return car
-                else:
-                    results = [-999]
-                    return results
+
+
+                panduanst = time.clock()
+                # if results:
+                panduanet = time.clock()
+                print('----判断用时：')
+                print(panduanet-panduanst)
+
+                fuzhist = time.clock()
+                for rowa in results:
+                    id = rowa.id
+                    inteid = rowa.inteid
+                    direction = rowa.direction
+                    lane = rowa.lane
+                    carplate = rowa.carplate
+                    passtime = rowa.passtime
+                    traveltime = rowa.traveltime
+                    upinteid = rowa.upinteid
+                    updirection = rowa.updirection
+                    uplane = rowa.uplane
+                    car.append([id, inteid, direction, lane, carplate, passtime, traveltime, upinteid, updirection,
+                                uplane])
+                fuzhiet = time.clock();
+                print('----newperiodreadlist方法中的for循环用时：')
+                print(fuzhiet-fuzhist)
+                return car
+                # else:
+                #     results = [-999]
+                #     return results
 
             daycarlist = []
+            # 看一下方法执行时间
+            sqlstarttime1 = time.clock()
             daycarlist = newperiodreadlist(t.direction)
+            sqlendtime1 = time.clock()
+            print('-----newperiodreadlist方法所用时间为 ： ')
+            print(sqlendtime1 - sqlstarttime1)
+
             print(t.direction)
             # print(daycarlist)
             print(" 读取路口当前日期数据库完成 %s" % ctime())
@@ -4013,13 +4040,18 @@ def Get_Date(resquest):
                 return f
 
             sidlanelist = []
+            sidst = time.clock()
             sidlanelist = automakesidlist(daycarlist, idtsclane)  # sidlanelist是一个列表，长度是路口总id长度，里面包含了对应sid的列表
-
+            sidet = time.clock()
+            print('-----sid生成时间：')
+            print(sidet-sidst)
             #  print(sidlanelist)
             # sidlanelist有sid个数的列表，里面是按日期和sid分开的子列表
 
             # 一个数据一个点
             def pointmaker(a, b):  # a为一个数据,b为周期
+
+
                 x = [0, 0]
                 x[0] = a[5].hour + a[5].minute / 60 + a[5].second / 3600  # 横坐标
                 x[1] = (a[5].hour * 3600 + a[5].minute * 60 + a[5].second) % b
@@ -4045,13 +4077,20 @@ def Get_Date(resquest):
                 return t
 
             pointlist = []
+            dianzhenst = time.clock()
             pointlist = autopointlistmaker(sidlanelist, t.Yaxis, t.Xaxisa, t.Xaxisb)
+            dianzhenet = time.clock()
+            print('----点阵生成用时：')
+            print(dianzhenet-dianzhenst)
             print(" 点阵完成 %s" % ctime())
 
             # 点阵生成完毕 按sid编号
-
+            diaoyongst = time.clock()
             fig=plt.figure(figsize=(12,6))
             ax=fig.add_axes([0.03,0.05,0.95,0.94])
+            diaoyonget = time.clock()
+            print('----调用模块用时：')
+            print(diaoyonget-diaoyongst)
             def picturemaker(a, e, f):  # a sid编号 b周期 c d时间区间 e为点阵 f：点的颜色
                 if a != -999:  # plt.plot(pointlist[0][i][0],pointlist[0][i][1],color='red',marker='.')
                     ax.scatter(e[a - 1][0], e[a - 1][1], s=0.2 * 10, c=f);
@@ -4089,8 +4128,11 @@ def Get_Date(resquest):
                 print(" 图片生成完成 %s" % ctime())
                 # plt.show()
 
+            picst = time.clock()
             autopicturemaker(t.Alane, t.Blane, t.Clane, t.Dlane, t.Yaxis, t.Xaxisa, t.Xaxisb, pointlist)  # 红 蓝 绿 黄
-
+            picet = time.clock()
+            print('图片生成时间：')
+            print(picet-picst)
 
 
 
@@ -4119,6 +4161,9 @@ def Get_Date(resquest):
     context['t'] = '/' + 'flowchart9527' + '/' + str(random.randint(1, 999))
     context['netname123'] ="/static/images/_flowchart/examples"+str(ran)+".jpg"
 
+    allendtime = time.clock()
+    print('-----方法总用时：')
+    print(allendtime-allstarttime)
     return render(resquest, 'flowchart.html',context )
 
 def Show_picture(resquest):

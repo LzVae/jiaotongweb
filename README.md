@@ -41,3 +41,16 @@
 
 
 
+编写sql语句查看到底有多少条数据
+
+```mysql
+select count(*) as 'table1',
+		count(*) as 'table2',
+		count(*) as 'table3',
+			from 2017524_2013525_58_10,
+					2017524_2014525_58_10,
+					2017524_2017225_58_10
+						order by count(*);
+	   
+```
+
