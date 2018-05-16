@@ -1,7 +1,120 @@
-{% extends "homebase.html" %}
 {% load humanize %}
 {% load staticfiles %}
 
-{% block chunk %}
-    <img src="/static/images/timg.jpg" width="100%">
-{% endblock %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta HTTP-EQUIV = "Pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV = "Cache-Control" CONTENT="no-cache,must-revalidate">
+    <meta HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+    <meta HTTP-EQUIV = "Expires" CONTENT="0">
+
+
+    <link href="{% static "css/style.css"%}" rel="stylesheet">
+    <script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
+
+    <link rel="stylesheet" href="{% static "layui/css/layui.css" %}"  media="all">
+
+
+
+    <title>flowchart</title>
+
+  </head>
+  <body>
+
+        <div class="layui-layout layui-layout-admin">
+          <div class="layui-header">
+            <div class="layui-logo" style="line-height: 28px;">
+                广信大数据驱动交通信号控制分析评价及优化系统
+            </div>
+            <!-- 头部区域（可配合layui已有的水平导航） -->
+            <ul class="layui-nav layui-layout-left">
+              <li class="layui-nav-item layui-this">
+                  <a href="#">首页</a></li>
+            </ul>
+
+            <ul class="layui-nav layui-layout-right">
+              <li class="layui-nav-item"><a href="">@广信大数据驱动交通信号控制分析评价及优化系统</a></li>
+            </ul>
+          </div>
+
+          <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+              <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+              <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+                  <li class="layui-nav-item layui-this">
+                    <a href="/">首页</a>
+                  </li>
+
+                  <li class="layui-nav-item">
+                      <a href="/datacheck">数据监测</a>
+                  </li>
+
+                  <li class="layui-nav-item">
+                    <a href="/flowchart">交叉口双时域图分析</a>
+                  </li>
+
+                  <li class="layui-nav-item">
+                      <a href="/map">交叉口流量分析</a>
+                  </li>
+
+                  <li class="layui-nav-item">
+                      <a href="/detection" title="周期、相位序列和绿灯时间优化" style="font-size: 12px; text-overflow: clip;">
+                          周期、相位序列和绿灯时间优化</a>
+                  </li>
+
+                  <li class="layui-nav-item">
+                      <a href="/phasecheck">相位差优化</a>
+                  </li>
+
+
+
+              </ul>
+            </div>
+          </div>
+
+          <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <div >
+                <img src="/static/images/timg.jpg" width="100%">
+            </div>
+          </div>
+
+          <div class="layui-footer" style="text-align: center">
+            <!-- 底部固定区域 -->
+            © 广信大数据驱动交通信号控制分析评价及优化系统
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+    <script src="{% static "layui/layui.js" %}" charset="utf-8"></script>
+    <script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function(){
+      var element = layui.element;
+
+      //…
+    });
+    </script>
+</html>
+
+
+

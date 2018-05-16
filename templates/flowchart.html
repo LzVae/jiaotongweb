@@ -1,23 +1,313 @@
-{% extends "base.html" %}
+
 {% load humanize %}
 {% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta HTTP-EQUIV = "Expires" CONTENT="0">
+    <meta HTTP-EQUIV = "Pragma" CONTENT="no-cache">
+    <meta HTTP-EQUIV = "Cache-Control" CONTENT="no-cache">
+    <meta HTTP-EQUIV = "Cache" CONTENT="no-cache">
+
+
+    <link href="{% static "css/bootstrap.min.css" %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/jquery.bxslider.css"%}" rel="stylesheet">
+    <link href="{% static "css/style.css"%}" rel="stylesheet">
+          <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{% static "js/jquery-3.2.1.min.js" %}"></script>
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+
+    <link rel="stylesheet" href="{% static "layui/css/layui.css" %}"  media="all">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>flowchart</title>
+
+  </head>
+
+
+  <body>
+
+
+    <div class="layui-layout layui-layout-admin">
+          <div class="layui-header">
+            <div class="layui-logo" style="line-height: 28px;">
+                广信大数据驱动交通信号控制分析评价及优化系统
+            </div>
+            <!-- 头部区域（可配合layui已有的水平导航） -->
+            <ul class="layui-nav layui-layout-left">
+              <li class="layui-nav-item layui-this">
+                  <a href="">交叉口双时域图分析</a></li>
+            </ul>
+
+            <ul class="layui-nav layui-layout-right">
+              <li class="layui-nav-item"><a href="">@广信大数据驱动交通信号控制分析评价及优化系统</a></li>
+            </ul>
+          </div>
+
+          <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+              <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+              <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+                  <li class="layui-nav-item">
+                    <a href="/">首页</a>
+                  </li>
+
+                  <li class="layui-nav-item">
+                      <a href="/datacheck">数据监测</a>
+                  </li>
+
+                  <li class="layui-nav-item layui-this">
+                    <a href="/flowchart">交叉口双时域图分析</a>
+                  </li>
+
+                  <li class="layui-nav-item">
+                      <a href="/map">交叉口流量分析</a>
+                  </li>
+
+                  <li class="layui-nav-item">
+                      <a href="/detection" title="周期、相位序列和绿灯时间优化" style="font-size: 12px; text-overflow: clip;">
+                          周期、相位序列和绿灯时间优化</a>
+                  </li>
+
+                  <li class="layui-nav-item">
+                      <a href="/phasecheck">相位差优化</a>
+                  </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <div >
+                <div id="large-header" class="large-header" style="position: absolute">
+                    <canvas id="demo-canvas"></canvas>
+                </div>
+
+                <form  action="" method="POST">
+                         {% csrf_token %}
+                <div class="container-fluid" style="background-image:linear-gradient(180deg, rgba(255,255,255,0) 60%, #fff),linear-gradient(70deg, #dbedff 32%, #ebfff0);
+                padding: 10px;" id="input_area">
+
+                    <div class='form-group'>
+                    <div class="row">
+                        <div class=" col-sm-2 col-md-2 col-lg-2">
+                            <div class="input-group">
+                              <label class="input-group-addon" for="year">年</label>
+                              {{ picture_form.year}}
+            {#                                         <input  id="year" type="text" name="year" placeholder="请输入年份" >#}
+                          </div>
+                             <div class="input-group">
+                                  <label class="input-group-addon"   for="month">月</label>
+                                   {{ picture_form.month}}
+            {#                                          <input id='month' type="text" name="month" placeholder="请输入月份" >#}
+
+                              </div>
+                            <div class="input-group">
+                              <label class="input-group-addon"   for="day">日</label>
+                               {{ picture_form.day}}
+            {#                                          <input id='day' type="text" name="day" placeholder="请输入日期">#}
+                           </div>
+                    </div>
+                        <div class=" col-sm-2 col-md-2 col-lg-2">
+                            <div class="input-group">
+                                <label class="input-group-addon" for="direction">路口</label>
+                                {{picture_form.direction  }}
+                            </div>
+
+                            <div class="input-group">
+                                <label class="input-group-addon" for="Xaxisa">时间段起点</label>
+                                {{picture_form.Xaxisa}}
+                            </div>
+
+                            <div class="input-group">
+                                 <label class="input-group-addon" for="Xaxisb">时间段终点</label>
+                                {{picture_form.Xaxisb  }}
+                            </div>
+
+                            <div class="input-group">
+                                <label class="input-group-addon" for="Yaxis">时间周期</label>
+                                {{picture_form.Yaxis  }}
+                            </div>
+                        </div>
+                        <div class=" col-sm-2 col-md-2 col-lg-2">
+                            <div class="input-group">
+                                             <label class="input-group-addon" for="Alane">相位一</label>
+                                            {{picture_form.Alane }}
+                                        </div>
+                                        <div class="input-group">
+                                             <label class="input-group-addon" for="Blane">相位二</label>
+                                            {{picture_form.Blane  }}
+                                        </div>
+                                        <div class="input-group">
+                                            <label class="input-group-addon" for="Clane">相位三</label>
+                                            {{picture_form.Clane }}
+                                        </div>
+                                        <div class="input-group">
+                                             <label class="input-group-addon" for="Dlane">相位四</label>
+                                            {{picture_form.Dlane  }}
+                                        </div>
+                        </div>
+                        <div class=" col-sm-2 col-md-2 col-lg-2">
+                                           <div>
+                                 <a href="/">
+                                  <button type='submit' id="myButton1" data-loading-text="Loading..." class="btn btn-primary btn-lg btn-block" >
+                                      生成图像
+                                  </button>
+                                 </a>
+                                </div>
+
+                        </div>
+                        <div class=" col-sm-3 col-md-3 col-lg-3">
+                                   <div class="panel panel-info">
+                                          <!-- Default panel contents -->
+                                      <div class="panel-heading">
+                                          <h4 class="panel-title" style="font-weight: bold;">使用说明</h4>
+                                      </div>
+                                        <div class="panel-body">
+                                            <p><h5>  点击生成图像将生成当前生成设置里的图像。如果要更新数据，请点击复位按钮后，在设置框内输入数据后点击更新数据。相位一为红色，相位二为蓝色，相位三为绿色，相位四为黄色。不监测的通道请输入-999</h5></p>
+                                        </div>
+
+
+                                    </div>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+                </form>
+                <div class="container-fluid">
+                   <div class="row">
+                       <div class=" col-sm-8 col-md-8 col-lg-8">
+                        <img src="{{ netname123 }}", width="100%" style="margin-left: 10px;">
+                       </div>
+
+                       <div class=" col-sm-4 col-md-4 col-lg-4">
+                            <div class="panel panel-success"">
+                                          <!-- Default panel contents -->
+                                <div class="panel-heading">
+                                    <h4 class="panel-title" style="color: #3c763d;font-weight: bold;">当前生成设置</h4>
+                                </div>
+
+                                          <!-- Table -->
+                                <table class="table">
+                                    <tr>
+                                        <th>设置参数</th>
+                                        <th>当前数值</th>
+                                      </tr>
+                                      <tr>
+                                        <td>日期</td>
+                                        <td>{{ date }}</td>
+                                      </tr>
+                                      <tr>
+                                        <td>路口编号</td>
+                                        <td>{{ id }}</td>
+                                      </tr>
+                                      <tr>
+                                        <td>时间段起点</td>
+                                        <td>{{ origin }}</td>
+                                      </tr>
+                                      <tr>
+                                        <td>时间段终点</td>
+                                        <td>{{ end }}</td>
+                                      </tr>
+                                      <tr>
+                                        <td>时间周期</td>
+                                        <td>{{ perior }}</td>
+                                      </tr>
+                                      <tr>
+                                        <td>监测路口sid</td>
+                                        <td>{{ sid }}</td>
+                                      </tr>
+                                </table>
+                            </div>
+                           <div class="panel panel-warning">
+                                      <div class="panel-heading">
+                                        <h3 class="panel-title">当前路口渠化图</h3>
+                                      </div>
+                                      <div class="panel-body">
+
+                                         {% ifequal id 23  %}
+                                           <img src="/static/images/_tsclane/tsclane23.jpg" width="300px">
+                                         {% endifequal %}
+                                         {% ifequal id 24  %}
+                                           <img src="/static/images/_tsclane/tsclane24.jpg" width="300px">
+                                         {% endifequal %}
+                                         {% ifequal id 55 %}
+                                           <img src="/static/images/_tsclane/tsclane55.jpg"width="300px">
+                                         {% endifequal %}
+                                          {% ifequal id 56  %}
+                                           <img src="/static/images/_tsclane/tsclane56.jpg"width="300px">
+                                         {% endifequal %}
+                                         {% ifequal id 57  %}
+                                           <img src="/static/images/_tsclane/tsclane57.jpg"width="300px">
+                                         {% endifequal %}
+                                         {% ifequal id 58  %}
+                                           <img src="/static/images/_tsclane/tsclane58.jpg"width="300px">
+                                         {% endifequal %}
+                                         {% ifequal id 75  %}
+                                           <img src="/static/images/_tsclane/tsclane75.jpg" width="300px">
+                                         {% endifequal %}
+                                         {% ifequal id 77  %}
+                                           <img src="/static/images/_tsclane/tsclane77.jpg" width="300px">
+                                         {% endifequal %}
+                                         {% ifequal id 89  %}
+                                           <img src="/static/images/_tsclane/tsclane89.jpg"width="300px">
+                                         {% endifequal %}
+
+                                      </div>
+                           </div>
+                       </div>
+                   </div>
+            {#            <br>#}
+            {#            <br>#}
+
+
+                </div>
+
+
+
+
+            </div>
+          </div>
+
+          <div class="layui-footer" style="text-align: center">
+            <!-- 底部固定区域 -->
+            © 广信大数据驱动交通信号控制分析评价及优化系统
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+    <script src="{% static "js/flowchart.js" %}"></script>
+    <script src="{% static "layui/layui.js" %}" charset="utf-8"></script>
+    <script>
+    //注意：导航 依赖 element 模块，否则无法进行功能性操作
+    layui.use('element', function(){
+      var element = layui.element;
+
+      //…
+    });
+    </script>
+</html>
+
 {#{% load url from future %}#}
 
-{% block picture %}
-{#    <img src="/static/images/examples.jpg", width="1500px">#}
-    <img src="{{ netname123 }}", width="100%" style="margin-left: 10px;">
-{% endblock %}
-{% block show %}
-
-
-                <button type="button" id="myButton2" data-loading-text="Loading..." class="btn btn-primary  btn-lg" autocomplete="off">
-                <a href="/flowchart">
-                                    生成图像
-                      </a>
-                              </button>
-
-
-
-
-
-{% endblock %}
