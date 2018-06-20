@@ -3932,11 +3932,11 @@ def Get_Date(resquest):
                 # print(results[0][0])
 
 
-                panduanst = time.clock()
+                # panduanst = time.clock()
                 # if results:
-                panduanet = time.clock()
-                print('----判断用时：')
-                print(panduanet-panduanst)
+                # panduanet = time.clock()
+                # print('----判断用时：')
+                # print(panduanet-panduanst)
 
                 fuzhist = time.clock()
                 for rowa in results:
